@@ -39,17 +39,17 @@ def dbscan(data):
 	d = StandardScaler().fit_transform(data)
 	d = np.nan_to_num(d)
 	db = DBSCAN(eps = 0.3, min_samples = 10).fit(d)
-	core_sampes_mask = np.zeros_like(db.labels_, dtype = bool)
+	core_samples_mask = np.zeros_like(db.labels_, dtype = bool)
 	core_samples_mask[db.core_sample_indices_ ] = True
 	labels = db.labels_
 
-	numclusters = len(set(lables)) - (1 if -1 in labels else 0)
+	numclusters = len(set(labels)) - (1 if -1 in labels else 0)
 	numnoise = list(labels).count(-1)
 	#print(numclusters)
 	#print(numnoise)
 
-	unique_lables = set(labels)
-	colors = [plt.cm.Spectral(each)
+	unique_labels = set(labels)
+	colors = [plt.cm.get_cmap("Spectral")
 		for each in np.linspace(0, 1, len(unique_labels))]
 
 	for k, col in zip(unique_labels, colors):
@@ -66,7 +66,7 @@ def dbscan(data):
 	    plt.plot(xy[:, 0], xy[:, 1], 'o', markerfacecolor=tuple(col),
 	             markeredgecolor='k', markersize=6)
 
-	plt.title('Estimated number of clusters: %d' % n_clusters_)
+	plt.title('Estimated number of clusters: %d' % numclusters)
 	plt.show()
 
 if __name__ == '__main__':
