@@ -1,0 +1,59 @@
+import pandas as pd
+import os
+import sys
+import datetime as dt
+from datetime import datetime
+import csv
+
+filein = 'YTdata_removedNonEnglish.csv'
+
+
+df = pd.read_csv(filein)
+timeFetched = df["timeFetched"]
+publish_time = df["publish_time"]
+publish_time_array = publish_time.to_numpy() #Numpy of publishing dates (in string format)
+timeFetched_array = timeFetched.to_numpy() #Numpy of time fetched (in string format)
+
+index = 0
+hour = [] #List of timzones with hours (in string format)
+parsedPublishTime = [] #List of publishing dates (in datetime format)
+parsedTimeFetched = [] #List of time_fetched dates (in datetime format)
+day = []
+month = []
+year = []
+#differenceDays = []
+while (index < len(publish_time_array)):
+    
+    # Modify the Publishing time
+    row1 = publish_time_array[index]
+    hour.append(row1[11:18])
+    publish_time_array[index] = row1[0:10]
+    datePublished = datetime.strptime(publish_time_array[index],'%Y-%m-%d')
+    parsedPublishTime.append(datePublished)
+    
+    # 4 new columns: day, month, and year
+    day.append(datePublished.day)
+    month.append(datePublished.month)
+    year.append(datePublished.year)
+    
+
+    # Modify the Time fetched data
+    #row2 = timeFetched_array[index]
+    #try:
+        #fetchedDay = datetime.strptime(row2,'%d/%m/%y')
+        #parsedTimeFetched.append(fetchedDay)
+    #except ValueError:
+        #fetchedDay = datetime.strptime(row2,'%d/%m/%y')
+        #parsedTimeFetched.append(fetchedDay)
+    
+    #calculate the difference in days between publishing time and time fetched
+    #differenceDays.append(fetchedDay - datePublished)
+    index = index + 1 
+
+df.insert(2, "Day_Published", day)
+df.insert(3, "Month_Published", month)
+df.insert(4, "Year_Published", year)
+df.insert(5, "Hour_Published", hour)
+#df.insert(5, "Difference_Days", differenceDays)
+df.head()
+df.to_csv('YTdata_removedNonEnglish_AddedColumns.csv', index=False)
