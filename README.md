@@ -8,7 +8,7 @@ Youtube fosters content from all around the world, so we have deleted video entr
 
 The csv format of final file that contains both Old and New data:
 
-{regionTrending	trendingRank	timeFetched	videoId	videoTitle	videoCategoryId	videoPublishTime	videoDuration	videoTags	videoViews	videoLikes	videoDislikes	videoCommentCount	videoDescription	videoLicenced	channelTitle	channelId	channelDescription	channelPublishedAt	channelViewCount	channelSubsCount	channelVideoCount	thumbnail_link	comments_disabled	ratings_disabled	video_error_or_removed	publishDateCorrectFormat	trendingDateCorrectFOrmat	dayDifference	newOrOldData}
+{regionTrending	trendingRank	timeFetched	videoId	videoTitle	videoCategoryId	videoPublishTime	videoDuration	videoTags	videoViews	videoLikes	videoDislikes	videoCommentCount	videoDescription	videoLicenced	channelTitle	channelId	channelDescription	channelPublishedAt	channelViewCount	channelSubsCount	channelVideoCount	thumbnail_link	comments_disabled	ratings_disabled	video_error_or_removed	publishDateCorrectFormat	trendingDateCorrectFormat	dayDifference publishedZTime publishedZTimeFloat	publishedDayOfWeek	newOrOldData}
   
 Note the following for old data:
 1. Added a column trendingRank and made it 0 for all rows for old data
