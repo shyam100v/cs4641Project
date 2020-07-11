@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cs4641project by shyam100v</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Cs4641project</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/shyam100v/cs4641Project" class="btn">View on GitHub</a>
+      <a href="https://github.com/shyam100v/cs4641Project/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/shyam100v/cs4641Project/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="cs4641project" class="anchor" href="#cs4641project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>cs4641Project</h1>
+<h2>
+<a id="cleaning-up-the-data" class="anchor" href="#cleaning-up-the-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cleaning up the data</h2>
+<p>Youtube fosters content from all around the world, so we have deleted video entries in the dataset that are not in english to easier analyze the data, as not everyone in our team speaks other languages such as french.</p>
+<h2>
+<a id="regarding-duplicates-in-the-data" class="anchor" href="#regarding-duplicates-in-the-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Regarding duplicates in the data</h2>
+<p>There are duplicates in the old and new data. A lot of videos in old Data did not have Video ID. They are marked as "notAvailable" in videoID. The old data had 80362 duplicates. There were totally 105094 data points in old data. 76.5% of old data were duplicates. The videos with highest number of views was retained. The new dataset had 8276 duplicates and 1483 unique values. Now totally we have 24502 (old) + 1483 (new) = 25985 unique points</p>
+<h2>
+<a id="data-format" class="anchor" href="#data-format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Format</h2>
+<p>The csv format of final file that contains both Old and New data:</p>
+<ol>
+<li>regionTrending</li>
+<li>trendingRank</li>
+<li>timeFetched	4. videoId</li>
+<li>videoTitle</li>
+<li>videoCategoryId</li>
+<li>videoPublishTime</li>
+<li>videoDuration</li>
+<li>videoTags
+10.videoViews</li>
+<li>videoLikes</li>
+<li>videoDislikes</li>
+<li>videoCommentCount</li>
+<li>videoDescription</li>
+<li>videoLicenced</li>
+<li>channelTitle</li>
+<li>channelId</li>
+<li>channelDescription</li>
+<li>channelPublishedAt</li>
+<li>channelViewCount</li>
+<li>channelSubsCount</li>
+<li>channelVideoCount</li>
+<li>thumbnail_link</li>
+<li>comments_disabled</li>
+<li>ratings_disabled</li>
+<li>video_error_or_removed</li>
+<li>publishDateCorrectFormat</li>
+<li>trendingDateCorrectFormat</li>
+<li>dayDifference</li>
+<li>publishedZTime</li>
+<li>publishedZTimeFloat</li>
+<li>publishedDayOfWeek</li>
+<li>newOrOldData</li>
+</ol>
+<p>Note the following for old data:</p>
+<ol>
+<li>Added a column trendingRank and made it 0 for all rows for old data</li>
+<li>Following columns are made as 0: channelViewCount, channelSubsCount, channelVideoCount, channelId</li>
+<li>Following columns are made as "notAvailable": videoDuration, videoLicenced, channelDescription, channelPublishedAt</li>
+<li>Correct Date format is DD-MM-YY (Sorry to the American born)</li>
+</ol>
+<p>For the new data:</p>
+<p>thumbnail_link, comments_disabled, ratings_disabled, video_error_or_removed are marked as 'notAvailable'</p>
+<h2>
+<a id="working-of-combiningdataipynb" class="anchor" href="#working-of-combiningdataipynb" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Working of combiningData.ipynb</h2>
+<p>All the new data files obtained from YouTube using the API must be in a subfolder "scrapedData" and must contain "csvOut" as part of their file name. The old data is in an excel file in the master folder (not inside any subfolders) as "finalOldData.xlsx". It is already in the correct format. The day difference between published date and the trending date is already calculated for old data. This python script generates two csv files: "newDataOnly_csv_newFormat.csv" (which contains only the new data in the correct format) and "oldAndNewData.csv" (concatenated with old data). Both the files are placed in the master folder. The script will take some time to read from "finalOldData.xlsx" and some time to write the larger output csv file. THis script does not clean the data. It only combines the two data pieces in the right format.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/shyam100v/cs4641Project">Cs4641project</a> is maintained by <a href="https://github.com/shyam100v">shyam100v</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
