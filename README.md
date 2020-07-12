@@ -71,11 +71,12 @@ All the new data files obtained from YouTube using the API must be in a subfolde
 We selected some properties from original video dataset as features of videos, including trending rank, video category, number of views, likes, and dislikes, number of comments, publish time, and video channel related features. For features like duration of video and publish time, we preprocessed our data such that they are represented in the same unit(second) and in a 24-hour time scale.
 We combined all 12 features into a training dataset and apply PCA. PCA was used to reduce the dimension of features through capturing variation. Here is the cumulative explained variance plot. 
 
-![pca_variance](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_dislikes.PNG)
+![pca_variance](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_variance.PNG)
 
-From the plot, we can see that at 6 components, we will get a desired cumulative explained variance(0.9). We also made two component PCA scatter plots to give us some visualizations. 
-![pca_views](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_dislikes.PNG)
-![pca_likes](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_dislikes.PNG)
+From the plot, we can see that at 6 components, we will get a desired cumulative explained variance(0.9). We also made two component PCA scatter plots to give us some visualizations.
+
+![pca_views](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_views.PNG)
+![pca_likes](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_likes.PNG)
 ![pca_dislikes](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_dislikes.PNG)
 
 From the scatter plots, we do can see number of views, likes, and dislikes are correlated. Low number of views, low number of likes, and low number of dislikes are all clustered at the middle-left part of the graph.
