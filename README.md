@@ -5,12 +5,15 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 
 
 ## Dataset: 
--> https://www.kaggle.com/datasnaek/youtube-new \\
+-> https://www.kaggle.com/datasnaek/youtube-new <br/>
 This dataset includes several months of data on daily trending YouTube videos. Data includes the video title, channel title, publish time, tags, views, likes and dislikes, description, and comment count for up to 200 trending videos per day for several regions. More information like the channel’s age, channel's video count, and subscriber count have been added using the YouTube API.
 
 
-## Cleaning up the data
-Youtube fosters content from all around the world, so we have deleted video entries in the dataset that are not in english to easier analyze the data, as not everyone in our team speaks other languages such as french. 
+# Cleaning up the data
+-> Youtube fosters content from all around the world, so we have deleted video entries in the dataset that are not in english to easier analyze the data, as not everyone in our team speaks other languages such as french. 
+-> We removed null entries
+-> We separated the publishing time column into specific month, day, year, and time columns.
+-> We handled outliers using hard thresholds and by using the mean and standard deviation. 
 
 ## Regarding duplicates in the data
 There are duplicates in the old and new data. A lot of videos in old Data did not have Video ID. They are marked as "notAvailable" in videoID. The old data had 80362 duplicates. There were totally 105094 data points in old data. 76.5% of old data were duplicates. The videos with highest number of views was retained. The new dataset had 8276 duplicates and 1483 unique values. Now totally we have 24502 (old) + 1483 (new) = 25985 unique points
