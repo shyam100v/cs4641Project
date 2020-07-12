@@ -67,8 +67,18 @@ thumbnail_link, comments_disabled, ratings_disabled, video_error_or_removed are 
 All the new data files obtained from YouTube using the API must be in a subfolder "scrapedData\" and must contain "csvOut" as part of their file name. The old data is in an excel file in the master folder (not inside any subfolders) as "finalOldData.xlsx". It is already in the correct format. The day difference between published date and the trending date is already calculated for old data. This python script generates two csv files: "newDataOnly_csv_newFormat.csv" (which contains only the new data in the correct format) and "oldAndNewData.csv" (concatenated with old data). Both the files are placed in the master folder. The script will take some time to read from "finalOldData.xlsx" and some time to write the larger output csv file. THis script does not clean the data. It only combines the two data pieces in the right format.
 
 
-## PCA
+## Principal Component Analysis(PCA)
+We selected some properties from original video dataset as features of videos, including trending rank, video category, number of views, likes, and dislikes, number of comments, publish time, and video channel related features. For features like duration of video and publish time, we preprocessed our data such that they are represented in the same unit(second) and in a 24-hour time scale.
+We combined all 12 features into a training dataset and apply PCA. PCA was used to reduce the dimension of features through capturing variation. Here is the cumulative explained variance plot. 
 
+![pca_variance](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_dislikes.PNG)
+
+From the plot, we can see that at 6 components, we will get a desired cumulative explained variance(0.9). We also made two component PCA scatter plots to give us some visualizations. 
+![pca_views](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_dislikes.PNG)
+![pca_likes](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_dislikes.PNG)
+![pca_dislikes](https://github.com/shyam100v/cs4641Project/blob/master/image/pca_dislikes.PNG)
+
+From the scatter plots, we do can see number of views, likes, and dislikes are correlated. Low number of views, low number of likes, and low number of dislikes are all clustered at the middle-left part of the graph.
 
 ## DBSCAN
 Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. 
