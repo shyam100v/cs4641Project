@@ -1,4 +1,4 @@
-# cs4641Project
+# What makes a YouTube video trend?
 
 ## Introduction/Background:
 YouTube is an online video-sharing platform with billions of users, posting and watching content for entertainment and education. YouTube monetizes popular videos for the number of views as it increases the use and popularity of the platform itself. With our project, we hope to provide insights on how to make a video trend on YouTube and predict the popularity of a video given certain features. 
@@ -6,19 +6,16 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 
 ## Dataset: 
 -> https://www.kaggle.com/datasnaek/youtube-new <br/>
-This dataset includes several months of data on daily trending YouTube videos. Data includes the video title, channel title, publish time, tags, views, likes and dislikes, description, and comment count for up to 200 trending videos per day for several regions. More information like the channel’s age, channel's video count, and subscriber count have been added using the YouTube API.
+This dataset includes several months of data on daily trending YouTube videos. Data includes the video title, channel title, publish time, tags, views, likes and dislikes, description, and comment count for up to 200 trending videos per day for several regions. More information like the channel’s age, channel's video count, and subscriber count have been added using the YouTube API. From this dataset, we will only be using the USA's, Canada's, and Great Britain's trending video data. 
 
 
-# Cleaning up the data
--> Youtube fosters content from all around the world, so we have deleted video entries in the dataset that are not in english to easier analyze the data, as not everyone in our team speaks other languages such as french. 
--> We removed null entries
--> We separated the publishing time column into specific month, day, year, and time columns.
--> We handled outliers using hard thresholds and by using the mean and standard deviation. 
+## Cleaning up the data
+Youtube fosters content from all around the world, so we have deleted video entries in the dataset that are not in english to easier analyze the data, as not everyone in our team speaks other languages such as french. We have also removed null entries, separated the publishing time column into specific month, day, year, and time columns, and handled outliers using hard thresholds and by using the mean and standard deviation. 
 
-## Regarding duplicates in the data
+### Regarding duplicates in the data
 There are duplicates in the old and new data. A lot of videos in old Data did not have Video ID. They are marked as "notAvailable" in videoID. The old data had 80362 duplicates. There were totally 105094 data points in old data. 76.5% of old data were duplicates. The videos with highest number of views was retained. The new dataset had 8276 duplicates and 1483 unique values. Now totally we have 24502 (old) + 1483 (new) = 25985 unique points
 
-## Data Format
+### Data Format
 The csv format of final file that contains both Old and New data:
 
 1. regionTrending	
@@ -68,4 +65,29 @@ thumbnail_link, comments_disabled, ratings_disabled, video_error_or_removed are 
 ## Working of combiningData.ipynb
 
 All the new data files obtained from YouTube using the API must be in a subfolder "scrapedData\" and must contain "csvOut" as part of their file name. The old data is in an excel file in the master folder (not inside any subfolders) as "finalOldData.xlsx". It is already in the correct format. The day difference between published date and the trending date is already calculated for old data. This python script generates two csv files: "newDataOnly_csv_newFormat.csv" (which contains only the new data in the correct format) and "oldAndNewData.csv" (concatenated with old data). Both the files are placed in the master folder. The script will take some time to read from "finalOldData.xlsx" and some time to write the larger output csv file. THis script does not clean the data. It only combines the two data pieces in the right format.
+
+
+## PCA
+
+
+## DBSCAN
+Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT. 
+
+
+## GradientBoostingRegressor
+
+
+## Multiple Regression
+
+
+## Linear Regression
+
+
+## Our Analysis and Insights
+###? do we need this section if we already mention the insights in each section above?
+
+## Future Work (not sure what this section is for)
+
+
+
 
