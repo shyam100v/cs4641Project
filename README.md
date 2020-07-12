@@ -71,7 +71,7 @@ All the new data files obtained from YouTube using the API must be in a subfolde
 
 
 ## DBSCAN
-Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT. 
+Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. 
 
 
 ## GradientBoostingRegressor
@@ -84,7 +84,7 @@ Using DBSCAN clustering on the video views and publishing time features, we can 
 
 
 ## Our Analysis and Insights
-###? do we need this section if we already mention the insights in each section above?
+ do we need this section if we already mention the insights in each section above?
 
 ## Future Work (not sure what this section is for)
 
