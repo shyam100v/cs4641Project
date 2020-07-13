@@ -18,8 +18,8 @@ There are duplicates in the old and new data. A lot of videos in old Data did no
 ### Data Format
 The csv format of final file that contains both Old and New data:
 
-|1. regionTrending	  |      12. videoDislikes	    |      23. thumbnail_link	      |
-| ------------------- | --------------------------- | ----------------------------- |
+| ------------------- | --------------------------- | ----------------------------- | 
+|1. regionTrending    |   12. videoDislikes         |  23. thumbnail_link           | 
 |2. trendingRank	    |   13. videoCommentCount	    |  24. comments_disabled        |
 |3. timeFetched	      |   14. videoDescription      |  25. ratings_disabled	        | 
 |4. videoId	          |   15. videoLicenced	        |  26. video_error_or_removed   |
