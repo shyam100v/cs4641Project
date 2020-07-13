@@ -56,9 +56,9 @@ From the scatter plots, we do can see number of views, likes, and dislikes are c
 
 ## DBSCAN
 **Publishing Times**\
-Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. 
+Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. (See [here](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/simpleDataAnalysis.ipynb))
 
-![dbscan_clusters](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG)
+![dbscan_clusters](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/DBSCAN_publishingHour.PNG)
 
 **Video Titles**\
 One of our main expected outcomes for the overall analysis of youtube videos was that video titles with similar characteristics to clickbait titles would have a higher view count. The main quantifiable characteristics that we seemed to find in all clickbait titles were capital letters and punctuation marks such as exlcamations points and question marks. We also figured that the length of the title could play a role as longer titles can give more information on the context of the videos. Using these three characteristics as a starting point, we manipulated our data to quanitfy these characteristics and then used DBSCAN to cluster them. Hopefully, we would be able to see clear clusters and relationships between the characteristics and the number of views. The below graphs are the results.
