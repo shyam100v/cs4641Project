@@ -8,14 +8,16 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 -> https://www.kaggle.com/datasnaek/youtube-new <br/>
 This dataset includes several months of data on daily trending YouTube videos. Data includes the video title, channel title, publish time, tags, views, likes and dislikes, description, and comment count for up to 200 trending videos per day for several regions. More information like the channel’s age, channel's video count, and subscriber count have been added using the YouTube API. From this dataset, we will only be using the USA's, Canada's, and Great Britain's trending video data. 
 
-#### Write about YouTube API and out data collection
+### YouTube API
+We also augment the available data with our own data scavenged from YouTube using its APIs. We wrote a [script](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/youtubeCrawl.ipynb) to fetch the top 200 trending videos from USA, Canada and Great Britain everyday for roughly a month. In addition, the channel information was also fetched and [compiled](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/combiningData.ipynb) with the data from Kaggle. 
 
 
 ## Cleaning up the data
-Youtube fosters content from all around the world, so we have deleted video entries in the dataset that are not in english to easier analyze the data, as not everyone in our team speaks other languages such as french. We have also removed null entries, separated the publishing time column into specific month, day, year, and time columns, and handled outliers using hard thresholds and by using the mean and standard deviation. 
-
-### Regarding duplicates in the data
-There are duplicates in the old and new data. A lot of videos in old Data did not have Video ID. They are marked as "notAvailable" in videoID. The old data had 80362 duplicates. There were totally 105094 data points in old data. 76.5% of old data were duplicates. The videos with highest number of views was retained. The new dataset had 8276 duplicates and 1483 unique values. Now totally we have 24502 (old) + 1483 (new) = 25985 unique points
+1. __Languages__: Youtube fosters content from all around the world in numerous languages. We discard video entries in the dataset that do not have English titles to easier analyze the data.
+2. __Handling duplicates__: Several videos are in trending charts for multiple days. In order to not skew the data, we retain only one copy of each video with the highest number of views.
+3. __Null entries__: We have also removed videos with ratings disables and comments disabled.
+4. __Handling dates and time__: We parse the dates and times in YouTube's native format to formats suitable for machine learning algorithms (floats and integets)
+5. __Handling outliers__: To gain insights for a majority of the data, outliers were removed using hard thresholds and by using the mean and standard deviation. 
 
 ### Data Format
 The csv format of final file that contains both Old and New data:
@@ -33,21 +35,7 @@ The csv format of final file that contains both Old and New data:
 |10. videoViews	       |21. channelSubsCount    |32. publishedDayOfWeek         |
 |11. videoLikes	       |22. channelVideoCount	  |33. newOrOldData               |
 	
-
-  
-Note the following for old data:
-1. Added a column trendingRank and made it 0 for all rows for old data
-2. Following columns are made as 0: channelViewCount, channelSubsCount, channelVideoCount, channelId
-3. Following columns are made as "notAvailable": videoDuration, videoLicenced, channelDescription, channelPublishedAt
-4. Correct Date format is DD-MM-YY (Sorry to the American born)
-
-For the new data:
-
-thumbnail_link, comments_disabled, ratings_disabled, video_error_or_removed are marked as 'notAvailable'
-
-## Working of combiningData.ipynb
-
-All the new data files obtained from YouTube using the API must be in a subfolder "scrapedData\" and must contain "csvOut" as part of their file name. The old data is in an excel file in the master folder (not inside any subfolders) as "finalOldData.xlsx". It is already in the correct format. The day difference between published date and the trending date is already calculated for old data. This python script generates two csv files: "newDataOnly_csv_newFormat.csv" (which contains only the new data in the correct format) and "oldAndNewData.csv" (concatenated with old data). Both the files are placed in the master folder. The script will take some time to read from "finalOldData.xlsx" and some time to write the larger output csv file. THis script does not clean the data. It only combines the two data pieces in the right format.
+ 
 
 
 ## Principal Component Analysis(PCA)
@@ -67,6 +55,7 @@ From the scatter plots, we do can see number of views, likes, and dislikes are c
 ## DBSCAN
 **Publishing Times**\
 Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. 
+
 ![dbscan_clusters](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG)
 
 **Video Titles**\
@@ -154,11 +143,11 @@ With all the above listed features, the model has an RMSE of __772445__ views. W
 
 ![featureImportance1](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi1.png)
 
-While this is intuitive, this does not serve as a good model for prediction since likes, dislikes and comments are not known in advance. After removing these three features, the feature importance is plotted below:
+While this is intuitive, this does not serve as a good model for prediction since likes, dislikes, age of video and comments are not known in advance. After removing these features, the feature importance is plotted below:
 
 ![featureImportance2](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi3.png)
 
-It is seen that the channel subscriber count, the age of the video and the number of videos in the channel are the most important predictors. 
+It is seen that the channel subscriber count, the number of videos, total views on the channel, and age of the channel are the most important predictors. 
 
 
 
