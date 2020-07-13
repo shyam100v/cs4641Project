@@ -148,6 +148,7 @@ With all the above listed features, the model has an RMSE of __772445__ views. W
 While this is intuitive, this does not serve as a good model for prediction since likes, dislikes, age of video and comments are not known in advance. After removing these features, the feature importance is plotted below:
 
 ![featureImportance2](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi3.png)
+
 *Feature importance 2*
 
 It is seen that the channel subscriber count, the number of videos, total views on the channel, and age of the channel are the most important predictors. 
