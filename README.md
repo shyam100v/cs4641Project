@@ -75,12 +75,15 @@ Ignoring any outlier points, we can see here that there actually little to no co
 To conlcude our findings, we can see that the majority of videos do not rely on the characteristics of the video titles. For those that do have some correlation, the title length ranges around 40, and the number of capital letters and punctuation stays around zero.
 
 ## Linear Regression
+**Correlation**\
 First, an analysis of the correlation between different variables was performed. Looking at the first row, it is seen that only likes, dislikes and comment count are correlated with the number of views of a video.
 ![Correlation table](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Correlation%20table.PNG)
 
+**Statistical Summary**\
 Then, a statistical summary of each of our variables was obtained. This analysis is useful to potentially identify any outliers in the data.
 ![max-min-std](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/max-min-std.PNG)
 
+**Histograms**\
 Based on the table above, the data for the number of views, likes and dislikes was modified to remove any data points that were outside 2 standard deviations from their respective mean. Then, a basic histogram of the number of views, likes and dislikes was plotted. As it is appreciated on the graphs below, the three graphs are heavily skewed which is understandable — most common YouTubers probably won’t have that many views, likes and dislikes. Ideally, the data should resemble a Gaussian distribution. Luckily, a log tranformation can be applied to the number of views, likes and dislikes to achieve that.
 
 ![Number of views without logs](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Number%20of%20views%20without%20logs.PNG)
@@ -90,6 +93,7 @@ Based on the table above, the data for the number of views, likes and dislikes w
 ![Log number of likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Log%20number%20of%20likes.PNG)
 ![Log number of views](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Log%20number%20of%20views.PNG)
 
+**Linear Regression**\
 Using this 3 histograms above, a linear regression of the log number of views versus the log number of likes and dislikes can be plotted. As expected, both correlations show an R^2 greater than 0.6, showing a big correlation between both the number of likes and dislikes and the number of views of a video. This analysis was only performed on these 2 variables since no other variables appear to correlate with the number of views of a video
 
 ![Linear regression of log views versus log dislikes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20dislikes.PNG)
