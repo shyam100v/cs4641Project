@@ -143,9 +143,18 @@ In conclusion, we see that the characteristics of a video title actually have a 
 Gradient Boosting Regressor is a form of tree ensemble model which builds an ensemble of weak predistion models. A new tree is trained at each step additively over the previous stage with the loss function as the residual error from previous stage. The [sklearn.ensemble.GradientBoostingRegressor model](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html) from sklearn module is used in this analysis. The data collected using the YouTube API is used to train and test the model with the number of views of a video as the target label. As stated in the above sections, the logarithm of the number of views is closer to a normal distribution and is hence used in place of the absolute value of number of views for training and testing.
 
 __Data preparation__: 
-The collected data is first filtered to exclude outliers in the number of views. For this analysis, only the videos that have a view count between 1000 and 10 million are used. The logarithm of the number of views, likes and dislikes is shown below. It is seen that they roughly follow a normal distribution. 
+The collected data is first filtered to exclude outliers in the number of views. For this analysis, only the videos that have a view count between 1000 and 10 million are used. The logarithm of the number of views, likes and dislikes is shown below. It is seen that they roughly follow a normal distribution. __Insert image here__.
 
-MDI feature importance
+__Model performance and Feature importance__
+
+The model is trained and the feature importance is plotted. It is seen from the plot that the number of likes and dislikes are the most important features in predicting the number of views. This is also intuitive since the number of views, likes and dislikes are usually very closely related. 
+![featureImportance1](https://github.com/shyam100v/cs4641Project/blob/master/mdi1.png)
+
+After removing the number of likes and dislikes as features, the same analysis is repeated to find the most important predictors. It is seen that the channel subscriber count, the age of the video and the number of videos in the channel are the most important predictors.
+![featureImportance2](https://github.com/shyam100v/cs4641Project/blob/master/mdi2.png)
+
+
+
 
 
 ## Our Analysis and Insights
