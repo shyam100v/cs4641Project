@@ -134,7 +134,7 @@ Using DBSCAN clustering on the video views and publishing time features, we can 
 <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG" alt="dbscan_clusters"></p>
 <p><strong>Video Titles</strong><br>
 One of our main expected outcomes for the overall analysis of youtube videos was that video titles with similar characteristics to clickbait titles would have a higher view count. The main quantifiable characteristics that we seemed to find in all clickbait titles were capital letters and punctuation marks such as exlcamations points and question marks. We also figured that the length of the title could play a role as longer titles can give more information on the context of the videos. Using these three characteristics as a starting point, we manipulated our data to quanitfy these characteristics and then used DBSCAN to cluster them. Hopefully, we would be able to see clear clusters and relationships between the characteristics and the number of views. The below graphs are the results.</p>
-<p><img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Length_of_Title_DBSCAN.png" alt="title length dbscan"></p>
+<p><img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Title_Length_DBSCAN.png" alt="title length dbscan"></p>
 <p><img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Num_Caps_DBSCAN.png" alt="capital letters dbscan"></p>
 <p><img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Num_Puncs_DBSCAN.png" alt="punctuation dbscan"></p>
 <p>In the graph, the darkest purple points represent the outliers or, in other words, the points that did not fit into any cluster. We can see here that there actually a much smaller correlation between the view count of a video and its title's characteristics. The largest clusters in the first two graphs show that there is practically no relation between the length of the title or the number of capital letters in the title and the view count. But, when looking at the clusters at a higher view count, we can actually see a little of the opposite of our expected outcome. Instead of long video titles, we can see higher view count clusters aroung the midpoint in video titles and instead of having a lot of capital letters, we actually see clusters with less capital letters have a higher view count. Finally, with the punctuation marks, we can see that clusters with high view counts actually have on average little to no punctuation marks.</p>
@@ -174,20 +174,24 @@ One of our main expected outcomes for the overall analysis of youtube videos was
 <p>In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed, especially on videos with extremely high view count. This is why this multiple regression model was so flat, because majority of videos actually have a relatively low view count no matter how they construct their video titles.</p>
 <h2>
 <a id="gradient-boosting-regressor" class="anchor" href="#gradient-boosting-regressor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gradient Boosting Regressor</h2>
-<p>Gradient Boosting Regressor is a form of tree ensemble model which builds an ensemble of weak predistion models. A new tree is trained at each step additively over the previous stage with the loss function as the residual error from previous stage. The <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html">sklearn.ensemble.GradientBoostingRegressor model</a> from sklearn module is used in this analysis. The data collected using the YouTube API is used to train and test the model with the number of views of a video as the target label. As stated in the above sections, the logarithm of the number of views is closer to a normal distribution and is hence used in place of the absolute value of number of views for training and testing.</p>
-<p><strong>Data preparation</strong>:
-The collected data is first filtered to exclude outliers in the number of views. For this analysis, only the videos that have a view count between 1000 and 10 million are used. The logarithm of the number of views, likes and dislikes is shown below. It is seen that they roughly follow a normal distribution. <strong>Insert image here</strong>.</p>
+<p>Gradient Boosting Regressor is a form of tree ensemble model which builds an ensemble of weak predistion models. A new tree is trained at each step additively over the previous stage with the loss function as the residual error from previous stage.</p>
+<p><strong>Model used</strong>: The <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html">sklearn.ensemble.GradientBoostingRegressor model</a> from sklearn module is used. The module also provides a method to visualize the <strong>importance of individual features</strong> after the model is trained. We use this to infer the most important contributors in predicting the number of views of a video (See <a href="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/simpleDataAnalysis.ipynb">here</a>).</p>
+<p><strong>Data Preparation</strong>: The data collected using the <strong>YouTube API</strong> is used to train and test the model with the logarithm of number of views of a video as the target label. Only the videos that have a view count between 1000 and 10 million are used. Sample of the data used is shown:</p>
+<p><img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png" alt="dataSample"></p>
 <p><strong>Model performance and Feature importance</strong></p>
-<p>The model is trained and the feature importance is plotted. It is seen from the plot that the number of likes and dislikes are the most important features in predicting the number of views. This is also intuitive since the number of views, likes and dislikes are usually very closely related.
-<img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi1.png" alt="featureImportance1"></p>
-<p>After removing the number of likes and dislikes as features, the same analysis is repeated to find the most important predictors. It is seen that the channel subscriber count, the age of the video and the number of videos in the channel are the most important predictors.
-<img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi2.png" alt="featureImportance2"></p>
-<h2>
-<a id="our-analysis-and-insights" class="anchor" href="#our-analysis-and-insights" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Our Analysis and Insights</h2>
-<p>The following is a summary of the key results and insights from the analyses that we carried out:</p>
+<p>With all the above listed features, the model has an RMSE of <strong>772445</strong> views. We infer from the plot that the number of likes and dislikes are the most important features in predicting the number of views.</p>
+<p><img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi1.png" alt="featureImportance1"></p>
+<p>While this is intuitive, this does not serve as a good model for prediction since likes, dislikes and comments are not known in advance. After removing these three features, the feature importance is plotted below:</p>
+<p><img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi3.png" alt="featureImportance2"></p>
+<p>It is seen that the channel subscriber count, the age of the video and the number of videos in the channel are the most important predictors.</p>
 <h2>
 <a id="future-work" class="anchor" href="#future-work" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Future Work</h2>
-<p>The following are the possible directions in which we would have enhanced our work if we had more time:</p>
+<p>The following are a few possible directions in which our work can be extended:</p>
+<ol>
+<li>Analysis of the impact of keywords in the title on number of views</li>
+<li>Deeper analysis of relation between channel popularity and video popularity</li>
+<li>Estimating potential size of audience for a given video type (Music, Movie trailer, etc), language among other features.</li>
+</ol>
 <h2>
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References:</h2>
 <p>[1] Gill, Phillipa et al. "Youtube traffic characterization: a view from the edge." Proceedings of the 7th ACM SIGCOMM conference on Internet measurement. 2007. <br>
