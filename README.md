@@ -82,8 +82,10 @@ From the plot, we can see that at 6 components, we will get a desired cumulative
 From the scatter plots, we do can see number of views, likes, and dislikes are correlated. Low number of views, low number of likes, and low number of dislikes are all clustered at the middle-left part of the graph.
 
 ## DBSCAN
+**Publishing Times**\
 Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. 
 
+**Video Titles**\
 
 ## GradientBoostingRegressor
 
