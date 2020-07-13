@@ -88,21 +88,28 @@ Using DBSCAN clustering on the video views and publishing time features, we can 
 ## GradientBoostingRegressor
 
 
-## Multiple Regression
 
 
 ## Linear Regression
-An analysis of the correlation between different variables 
+First, an analysis of the correlation between different variables was performed. It is seen that only likes, dislikes and comment count are correlated with the number of views of a video.
 ![Correlation table](https://github.com/shyam100v/cs4641Project/blob/master/image/Correlation%20table.PNG)
+This table then shows a statistical summary of each of our variables. This is useful to see to potentially identify any outliers in the data.
 ![max-min-std](https://github.com/shyam100v/cs4641Project/blob/master/image/max-min-std.PNG)
+Based on this analysis, the data for the number of views, likes and dislikes was modified to remove any data points that were outside 2 standard deviations from their respective mean. Then, a basic histogram of the number of views, likes and dislikes was then plotted. As it is appreciated on the graphs below, the three graphs are heavily skewed which is understandable — most common YouTubers probably won’t have that many views, likes and dislikes.
 ![Number of views without logs](https://github.com/shyam100v/cs4641Project/blob/master/image/Number%20of%20views%20without%20logs.PNG)
 ![Number of dislikes without logs](https://github.com/shyam100v/cs4641Project/blob/master/image/Number%20of%20dislikes%20without%20logs.PNG)
 ![Number of likes without logs](https://github.com/shyam100v/cs4641Project/blob/master/image/Number%20of%20likes%20without%20logs.PNG)
+
+Ideally, the data should resemble a Gaussian distribution. Luckily, a log tranformation can be applied to the number of views, likes and dislikes to achieve that.
 ![Log number of dislikes](https://github.com/shyam100v/cs4641Project/blob/master/image/Log%20number%20of%20dislikes.PNG)
 ![Log number of likes](https://github.com/shyam100v/cs4641Project/blob/master/image/Log%20number%20of%20likes.PNG)
 ![Log number of views](https://github.com/shyam100v/cs4641Project/blob/master/image/Log%20number%20of%20views.PNG)
+
+Using this 3 histograms above, a linear regression of the log number of views versus the log number of likes and dislikes can be plotted. As expected, both correlations show an R^2 greater than 0.6, showing a big correlation between both the number of likes and dislikes and the number of views of a video. This analysis was only performed on these 2 variables since no other variables appear to correlate with the number of views of a video
 ![Linear regression of log views versus log dislikes](https://github.com/shyam100v/cs4641Project/blob/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20dislikes.PNG)
 ![Linear regression of log views versus log likes](https://github.com/shyam100v/cs4641Project/blob/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
+
+## Multiple Regression
 
 
 ## Our Analysis and Insights
