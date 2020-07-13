@@ -160,8 +160,10 @@ In conclusion, we see that the characteristics of a video title actually have a 
 
 Gradient Boosting Regressor is a form of tree ensemble model which builds an ensemble of weak predistion models. A new tree is trained at each step additively over the previous stage with the loss function as the residual error from previous stage. The [sklearn.ensemble.GradientBoostingRegressor model](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html) from sklearn module is used in this analysis. The data collected using the YouTube API is used to train and test the model with the number of views of a video as the target label. As stated in the above sections, the logarithm of the number of views is closer to a normal distribution and is hence used in place of the absolute value of number of views for training and testing.
 
+__Data preparation__: 
+The collected data is first filtered to exclude outliers in the number of views. For this analysis, only the videos that have a view count between 1000 and 10 million are used. The logarithm of the number of views, likes and dislikes is shown below. It is seen that they roughly follow a normal distribution. 
 
-
+MDI feature importance
 
 
 ## Our Analysis and Insights
