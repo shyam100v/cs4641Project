@@ -86,6 +86,18 @@ From the scatter plots, we do can see number of views, likes, and dislikes are c
 Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. 
 
 **Video Titles**\
+One of our main expected outcomes for the overall analysis of youtube videos was that video titles with similar characteristics to clickbait titles would have a higher view count. The main quantifiable characteristics that we seemed to find in all clickbait titles were capital letters and punctuation marks such as exlcamations points and question marks. We also figured that the length of the title could play a role as longer titles can give more information on the context of the videos. Using these three characteristics as a starting point, we manipulated our data to quanitfy these characteristics and then used DBSCAN to cluster them. Hopefully, we would be able to see clear clusters and relationships between the characteristics and the number of views. The below graphs are the results.
+
+![title length dbscan](https://github.com/shyam100v/cs4641Project/blob/master/image/Length_of_Title_DBSCAN.png)
+
+![capital letters dbscan](https://github.com/shyam100v/cs4641Project/blob/master/image/Num_Caps_DBSCAN.png)
+
+![punctuation dbscan](https://github.com/shyam100v/cs4641Project/blob/master/image/Num_Puncs_DBSCAN.png)
+
+In the graph, the darkest purple points represent the outliers or, in other words, the points that did not fit into any cluster. We can see here that there actually a much smaller correlation between the view count of a video and its title's characteristics. The largest clusters in the first two graphs show that there is practically no relation between the length of the title or the number of capital letters in the title and the view count. But, when looking at the clusters at a higher view count, we can actually see a little of the opposite of our expected outcome. Instead of long video titles, we can see higher view count clusters aroung the midpoint in video titles and instead of having a lot of capital letters, we actually see clusters with less capital letters have a higher view count. Finally, with the punctuation marks, we can see that clusters with high view counts actually have on average little to no punctuation marks. 
+
+To conlcude our findings, we can see that the majority of videos do not rely on the characteristics of the video titles. For those that do have some correlation, we can see that the findings are the opposite of what we originally expected to see.
+
 
 ## GradientBoostingRegressor
 
@@ -114,7 +126,7 @@ Using this 3 histograms above, a linear regression of the log number of views ve
 ![Linear regression of log views versus log likes](https://github.com/shyam100v/cs4641Project/blob/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
 
 ## Multiple Regression
-As we are trying to aid users in creating a popular Youtube video, we will look at one of the main features (excluding actual video content) that can manipulated by the video maker; the video title. Via Multiple Regression, we will use the quantifiable features of a video title to create a model that can predict the number of views a video will recieve based on it's title. In this case we will be looking at the length, number of capital letters, and number of exclamation and questions marks in the video title. We chose these parameters as they are common characteristics of clickbait titles, which are made exclusively for people to be attracted to.
+As we are trying to aid users in creating a popular Youtube video, we will look at one of the main features (excluding actual video content) that can manipulated by the video maker; the video title. Via Multiple Regression, we will use the quantifiable features of a video title to create a model that can predict the number of views a video will recieve based on it's title. In this case we will be looking at the length, number of capital letters, and number of exclamation and questions marks in the video title. Once again, we chose these parameters as they are common characteristics of clickbait titles, which are made exclusively for people to be attracted to.
 
 First we loaded our data and calculated the needed parameters from the given titles. Now, a major hinderance with our original data was that there were a few drastic outliers in relation to the number of views a video had. In order to eliminate those, we removed any data points that were more than one standard deviation away from the mean (which was a very large standard deviation, so it was fitting to only use one). But even then, our data was very skewed. In order to have a balanced model, we would ideally like a Gaussian distribution, so we decided to take the log of the number of views, which did in fact give us a Gausian ditribution. The below graphs show the data distribution before and after applying the log function. 
 
