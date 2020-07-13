@@ -92,7 +92,8 @@ Using DBSCAN clustering on the video views and publishing time features, we can 
 
 
 ## Linear Regression
-
+An analysis of the correlation between different variables 
+![Correlation table](https://github.com/shyam100v/cs4641Project/blob/master/image/Correlation%20table.PNG)
 
 ## Our Analysis and Insights
  do we need this section if we already mention the insights in each section above?
