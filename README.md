@@ -91,7 +91,7 @@ Using DBSCAN clustering on the video views and publishing time features, we can 
 
 
 ## Linear Regression
-First, an analysis of the correlation between different variables was performed. It is seen that only likes, dislikes and comment count are correlated with the number of views of a video.
+First, an analysis of the correlation between different variables was performed. Looking at the first row, it is seen that only likes, dislikes and comment count are correlated with the number of views of a video.
 ![Correlation table](https://github.com/shyam100v/cs4641Project/blob/master/image/Correlation%20table.PNG)
 
 Then, a statistical summary of each of our variables was obtained. This analysis is useful to potentially identify any outliers in the data.
