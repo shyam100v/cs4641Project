@@ -72,7 +72,7 @@ Using DBSCAN clustering on the video views and publishing time features, we can 
 **Video Titles**\
 One of our main expected outcomes for the overall analysis of youtube videos was that video titles with similar characteristics to clickbait titles would have a higher view count. The main quantifiable characteristics that we seemed to find in all clickbait titles were capital letters and punctuation marks such as exlcamations points and question marks. We also figured that the length of the title could play a role as longer titles can give more information on the context of the videos. Using these three characteristics as a starting point, we manipulated our data to quanitfy these characteristics and then used DBSCAN to cluster them. Hopefully, we would be able to see clear clusters and relationships between the characteristics and the number of views. The below graphs are the results.
 
-![title length dbscan](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Length_of_Title_DBSCAN.png)
+![title length dbscan](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Title_Length_DBSCAN.png)
 
 ![capital letters dbscan](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Num_Caps_DBSCAN.png)
 
