@@ -3,7 +3,7 @@
 Contributors (in alphabetical order): [Carla Lorente Anon](https://github.com/CarlaLorenteAnon), [Yuqi He](https://github.com/dave2929), [Preethi Narayanan](https://github.com/preethin248), [Divya Umapathy](https://github.com/preethin248), [Shyam Krishnan Venkateswaran](https://github.com/shyam100v)
 
 ## Introduction/Background:
-YouTube is an online video-sharing platform with billions of users, posting and watching content for entertainment and education. YouTube monetizes popular videos for the number of views as it increases the use and popularity of the platform itself. With our project, we hope to provide insights on how to make a video trend on YouTube and predict the popularity of a video given certain features. 
+YouTube is an online video-sharing platform with billions of users, posting and watching content for entertainment and education. YouTube monetizes popular videos for the number of views as it increases the use and popularity of the platform itself. With our project, we hope to provide insights on how to make money on YouTube by analyzing trending video features and predicting the popularity of a video given certain features. 
 
 
 ## Dataset: 
