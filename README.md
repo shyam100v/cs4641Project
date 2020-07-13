@@ -56,13 +56,12 @@ From the scatter plots, we do can see number of views, likes, and dislikes are c
 
 ## DBSCAN
 **Publishing Times**\
-Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. (See [here](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/simpleDataAnalysis.ipynb))
+Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. 
 
-![dbscan_clusters](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/DBSCAN_publishingHour.PNG)
-![dbscan_clusters](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/DBSCAN_publishingHour.PNG)
+![dbscan_clusters](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG)
 
 **Video Titles**\
-One of our main expected outcomes for the overall analysis of youtube videos was that video titles with similar characteristics to clickbait titles would have a higher view count. The main quantifiable characteristics that we seemed to find in all clickbait titles were capital letters and punctuation marks such as exlcamations points and question marks. We also figured that the length of the title could play a role as longer titles can give more information on the context of the videos. Using these three characteristics as a starting point, we manipulated our data to quanitfy these characteristics and then used DBSCAN to cluster them. Hopefully, we would be able to see clear clusters and relationships between the characteristics and the number of views. The below graphs are the results.
+After using DBSCAN clustering on three different characteristics of a video title (length, number of capital letters,and  number of exclamation/question marks) we can see that the results in the graphs below are different than we originally expected.
 
 ![title length dbscan](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Title_Length_DBSCAN.png)
 
@@ -70,12 +69,9 @@ One of our main expected outcomes for the overall analysis of youtube videos was
 
 ![punctuation dbscan](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Num_Puncs_DBSCAN.png)
 
-In the graph, the darkest purple points represent the outliers or, in other words, the points that did not fit into any cluster. We can see here that there actually a much smaller correlation between the view count of a video and its title's characteristics. The largest clusters in the first two graphs show that there is practically no relation between the length of the title or the number of capital letters in the title and the view count. But, when looking at the clusters at a higher view count, we can actually see a little of the opposite of our expected outcome. Instead of long video titles, we can see higher view count clusters aroung the midpoint in video titles and instead of having a lot of capital letters, we actually see clusters with less capital letters have a higher view count. Finally, with the punctuation marks, we can see that clusters with high view counts actually have on average little to no punctuation marks. 
+Ignoring any outlier points, we can see here that there actually little to no correlation between the view count of a video and its title's characteristics. The largest clusters in the first two graphs show that there is practically no relation between the length of the title or the number of capital letters in the title and the view count. But, when looking at the clusters at a higher view count, we can actually see a little of the opposite of our expected outcome. Instead of long video titles, we can see higher view count clusters aroung the midpoint in video titles and instead of having a lot of capital letters, we actually see clusters with less capital letters have a higher view count. Finally, with the punctuation marks, we can see that clusters with high view counts actually have on average little to no punctuation marks. 
 
-To conlcude our findings, we can see that the majority of videos do not rely on the characteristics of the video titles. For those that do have some correlation, we can see that the findings are the opposite of what we originally expected to see.
-
-
-
+To conlcude our findings, we can see that the majority of videos do not rely on the characteristics of the video titles. For those that do have some correlation, the title length ranges around 40, and the number of capital letters and punctuation stays around zero.
 
 ## Linear Regression
 First, an analysis of the correlation between different variables was performed. Looking at the first row, it is seen that only likes, dislikes and comment count are correlated with the number of views of a video.
@@ -99,15 +95,13 @@ Using this 3 histograms above, a linear regression of the log number of views ve
 ![Linear regression of log views versus log likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
 
 ## Multiple Regression
-As we are trying to aid users in creating a popular Youtube video, we will look at one of the main features (excluding actual video content) that can manipulated by the video maker; the video title. Via Multiple Regression, we will use the quantifiable features of a video title to create a model that can predict the number of views a video will recieve based on it's title. In this case we will be looking at the length, number of capital letters, and number of exclamation and questions marks in the video title. Once again, we chose these parameters as they are common characteristics of clickbait titles, which are made exclusively for people to be attracted to.
-
-First we loaded our data and calculated the needed parameters from the given titles. Now, a major hinderance with our original data was that there were a few drastic outliers in relation to the number of views a video had. In order to eliminate those, we removed any data points that were more than one standard deviation away from the mean (which was a very large standard deviation, so it was fitting to only use one). But even then, our data was very skewed. In order to have a balanced model, we would ideally like a Gaussian distribution, so we decided to take the log of the number of views, which did in fact give us a Gausian ditribution. The below graphs show the data distribution before and after applying the log function. 
+First we loaded our data and calculated the needed parameters from the given titles(length, number of capital letters, number of exclamation/question marks). As our data was originally very skewed, we removed any data points that were more than one standard deviation away from the mean and took the log of the number of views. This resulted in a Gausian ditribution for the number of views, which is ideal for any modeling. The below graphs show the data distribution before and after applying the log function. 
 
 ![Views before log function](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewskew.png)
 
 ![Views after log function](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewlog.png)
 
-Now that our data is better suited for analysis, we moved on to actually applying the regression model. Since we used three parameters (length, number of capital letters, and number of exclamation and queston marks) versus the number of views on a video, it would have resulted in a 3-dimensional model in a 4-dimensional space. As it is difficult to understand a 4-dimensional model, the following graphs show the regression models of just two parameters each versus the log of the number of views of the videos in order to give an overall picture.
+Now that our data is better suited for analysis, we can apply the regression analysis. Since we used three parameters versus the number of views on a video, it would have resulted in a 3-dimensional regression model in a 4-dimensional space. As it is difficult to understand a 4-dimensional model, the following graphs show the regression models of just two parameters each versus the log of the number of views of the videos in order to give an overall picture.
 
 ![length vs caps](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_lengthcapsreg.png)
 
@@ -115,9 +109,9 @@ Now that our data is better suited for analysis, we moved on to actually applyin
 
 ![caps vs puncs](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_capspuncsreg.png)
 
-As can be seen above, the grey plane in each of the graphs is the regression model that fits the set of data points the best. Since our data points are fairly spread out and do not show much correlation to the number of views, the fitted planes are relatively flat, and center ariund the area where most of the data points are in order to at least fit for a majority of videos. 
+As can be seen above, the grey plane in each of the graphs is the regression model that fits the set of data points the best. Since our data points are fairly spread out and do not show much correlation to the number of views, the fitted planes are relatively flat, and center around the area where most of the data points are in order to at least fit for a majority of videos. 
 
-Finally, to see how well our prediction model actually worked, we graphed a random set of data points that were used in our testing phase and compared them to their predictions.
+As a representation of the accuracy of our model, the below graph shows a comparison of the actual number views versus the predicted number of views for a random set of data points.
 
 ![predicted vs actual](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_predvsact.png)
 
@@ -127,7 +121,7 @@ As we can see here, the model tends to predict within the 200000 to 400000 views
 
 In the above graph, it can be seen that the lower the actual number of views a video has, the more accurate this model will be in its predictions. 
 
-In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed, especially on videos with extremely high view count. This is why this multiple regression model was so flat, because majority of videos actually have a relatively low view count no matter how they construct their video titles.
+In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed and have an incredibly low correlation, especially on videos with extremely high view count.
 
 
 ## Gradient Boosting Regressor
