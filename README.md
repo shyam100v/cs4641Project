@@ -8,6 +8,8 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 -> https://www.kaggle.com/datasnaek/youtube-new <br/>
 This dataset includes several months of data on daily trending YouTube videos. Data includes the video title, channel title, publish time, tags, views, likes and dislikes, description, and comment count for up to 200 trending videos per day for several regions. More information like the channel’s age, channel's video count, and subscriber count have been added using the YouTube API. From this dataset, we will only be using the USA's, Canada's, and Great Britain's trending video data. 
 
+#### Write about YouTube API and out data collection
+
 
 ## Cleaning up the data
 Youtube fosters content from all around the world, so we have deleted video entries in the dataset that are not in english to easier analyze the data, as not everyone in our team speaks other languages such as french. We have also removed null entries, separated the publishing time column into specific month, day, year, and time columns, and handled outliers using hard thresholds and by using the mean and standard deviation. 
@@ -154,7 +156,11 @@ In the above graph, it can be seen that the lower the actual number of views a v
 In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed, especially on videos with extremely high view count. This is why this multiple regression model was so flat, because majority of videos actually have a relatively low view count no matter how they construct their video titles.
 
 
-## GradientBoostingRegressor
+## Gradient Boosting Regressor
+
+Gradient Boosting Regressor is a form of tree ensemble model which builds an ensemble of weak predistion models. A new tree is trained at each step additively over the previous stage with the loss function as the residual error from previous stage. The [sklearn.ensemble.GradientBoostingRegressor model](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html) from sklearn module is used in this analysis. The data collected using the YouTube API is used to train and test the model with the number of views of a video as the target label. As stated in the above sections, the logarithm of the number of views is closer to a normal distribution and is hence used in place of the absolute value of number of views for training and testing.
+
+
 
 
 
