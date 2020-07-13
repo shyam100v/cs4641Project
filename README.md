@@ -17,19 +17,39 @@ There are duplicates in the old and new data. A lot of videos in old Data did no
 
 ### Data Format
 The csv format of final file that contains both Old and New data:
-|                     |                             |                               | 
-| ------------------- | --------------------------- | ----------------------------- | 
-|1. regionTrending    |   12. videoDislikes         |  23. thumbnail_link           | 
-|2. trendingRank	    |   13. videoCommentCount	    |  24. comments_disabled        |
-|3. timeFetched	      |   14. videoDescription      |  25. ratings_disabled	        | 
-|4. videoId	          |   15. videoLicenced	        |  26. video_error_or_removed   |
-|5. videoTitle	      |   16. channelTitle          |  27. publishDateCorrectFormat	|
-|6. videoCategoryId	  |   17. channelId	            |  28. trendingDateCorrectFormat|	
-|7. videoPublishTime	|   18. channelDescription	  |  29. dayDifference            |
-|8. videoDuration	    |   19. channelPublishedAt	  |  30. publishedZTime           |
-|9. videoTags	        |   20. channelViewCount      |  31. publishedZTimeFloat	    | 
-|10. videoViews	      |   21. channelSubsCount	    |  32. publishedDayOfWeek	      |
-|11. videoLikes	      |   22. channelVideoCount	    |  33. newOrOldData             |
+
+1. regionTrending	
+2. trendingRank	
+3. timeFetched	4. videoId	
+5. videoTitle	
+6. videoCategoryId	
+7. videoPublishTime	
+8. videoDuration	
+9. videoTags	
+10.videoViews	
+11. videoLikes	
+12. videoDislikes	
+13. videoCommentCount	
+14. videoDescription	
+15. videoLicenced	
+16. channelTitle	
+17. channelId	
+18. channelDescription	
+19. channelPublishedAt	
+20. channelViewCount	
+21. channelSubsCount	
+22. channelVideoCount	
+23. thumbnail_link	
+24. comments_disabled	
+25. ratings_disabled	
+26. video_error_or_removed	
+27. publishDateCorrectFormat	
+28. trendingDateCorrectFormat	
+29. dayDifference 
+30. publishedZTime 
+31. publishedZTimeFloat	
+32. publishedDayOfWeek	
+33. newOrOldData
 
   
 Note the following for old data:
@@ -64,7 +84,6 @@ From the scatter plots, we do can see number of views, likes, and dislikes are c
 ## DBSCAN
 Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. 
 
-![dbscan](https://github.com/shyam100v/cs4641Project/blob/master/image/dbscan_clusters.PNG)
 
 ## GradientBoostingRegressor
 
@@ -93,7 +112,35 @@ Using this 3 histograms above, a linear regression of the log number of views ve
 ![Linear regression of log views versus log likes](https://github.com/shyam100v/cs4641Project/blob/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
 
 ## Multiple Regression
+As we are trying to aid users in creating a popular Youtube video, we will look at one of the main features (excluding actual video content) that can manipulated by the video maker; the video title. Via Multiple Regression, we will use the quantifiable features of a video title to create a model that can predict the number of views a video will recieve based on it's title. In this case we will be looking at the length, number of capital letters, and number of exclamation and questions marks in the video title. We chose these parameters as they are common characteristics of clickbait titles, which are made exclusively for people to be attracted to.
 
+First we loaded our data and calculated the needed parameters from the given titles. Now, a major hinderance with our original data was that there were a few drastic outliers in relation to the number of views a video had. In order to eliminate those, we removed any data points that were more than one standard deviation away from the mean (which was a very large standard deviation, so it was fitting to only use one). But even then, our data was very skewed. In order to have a balanced model, we would ideally like a Gaussian distribution, so we decided to take the log of the number of views, which did in fact give us a Gausian ditribution. The below graphs show the data distribution before and after applying the log function. 
+
+![Views before log function](https://github.com/shyam100v/cs4641Project/blob/master/image/MultReg_viewskew.png)
+
+![Views after log function](https://github.com/shyam100v/cs4641Project/blob/master/image/MultReg_viewlog.png)
+
+Now that our data is better suited for analysis, we moved on to actually applying the regression model. Since we used three parameters (length, number of capital letters, and number of exclamation and queston marks) versus the number of views on a video, it would have resulted in a 3-dimensional model in a 4-dimensional space. As it is difficult to understand a 4-dimensional model, the following graphs show the regression models of just two parameters each versus the log of the number of views of the videos in order to give an overall picture.
+
+![length vs caps](https://github.com/shyam100v/cs4641Project/blob/master/image/MultReg_lengthcapsreg.png)
+
+![length vs puncs](https://github.com/shyam100v/cs4641Project/blob/master/image/MultReg_lengthpuncsreg.png)
+
+![caps vs puncs](https://github.com/shyam100v/cs4641Project/blob/master/image/MultReg_capspuncsreg.png)
+
+As can be seen above, the grey plane in each of the graphs is the regression model that fits the set of data points the best. Since our data points are fairly spread out and do not show much correlation to the number of views, the fitted planes are relatively flat, and center ariund the area where most of the data points are in order to at least fit for a majority of videos. 
+
+Finally, to see how well our prediction model actually worked, we graphed a random set of data points that were used in our testing phase and compared them to their predictions.
+
+![predicted vs actual](https://github.com/shyam100v/cs4641Project/blob/master/image/MultReg_predvsact.png)
+
+As we can see here, the model tends to predict within the 200000 to 400000 views range, and this is probably due to the very flat model that can be seen in the previous graphs. Though the model seems to overestimate the number of views for anything below 300000 views, it is actually proportional in a sense and predicts slighty less for those with less views and predicts slightly more for those with more views. Now, since it can be seen that the videos with a high number of views have very low predictions, we also calculated the error of the preditcions of videos with different ranges of views.
+
+![accuracy](https://github.com/shyam100v/cs4641Project/blob/master/image/MultReg_accuracy.png)
+
+In the above graph, it can be seen that the lower the actual number of views a video has, the more accurate this model will be in its predictions. 
+
+In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed, especially on videos with extremely high view count. This is why this multiple regression model was so flat, because majority of videos actually have a relatively low view count no matter how they construct their video titles.
 
 ## Our Analysis and Insights
  do we need this section if we already mention the insights in each section above?
