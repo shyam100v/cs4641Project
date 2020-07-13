@@ -94,6 +94,16 @@ Using DBSCAN clustering on the video views and publishing time features, we can 
 ## Linear Regression
 An analysis of the correlation between different variables 
 ![Correlation table](https://github.com/shyam100v/cs4641Project/blob/master/image/Correlation%20table.PNG)
+![max-min-std](https://github.com/shyam100v/cs4641Project/blob/master/image/max-min-std.PNG)
+![Number of views without logs](https://github.com/shyam100v/cs4641Project/blob/master/image/Number%20of%20views%20without%20logs.PNG)
+![Number of dislikes without logs](https://github.com/shyam100v/cs4641Project/blob/master/image/Number%20of%20dislikes%20without%20logs.PNG)
+![Number of likes without logs](https://github.com/shyam100v/cs4641Project/blob/master/image/Number%20of%20likes%20without%20logs.PNG)
+![Log number of dislikes](https://github.com/shyam100v/cs4641Project/blob/master/image/Log%20number%20of%20dislikes.PNG)
+![Log number of likes](https://github.com/shyam100v/cs4641Project/blob/master/image/Log%20number%20of%20likes.PNG)
+![Log number of views](https://github.com/shyam100v/cs4641Project/blob/master/image/Log%20number%20of%20views.PNG)
+![Linear regression of log views versus log dislikes](https://github.com/shyam100v/cs4641Project/blob/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20dislikes.PNG)
+![Linear regression of log views versus log likes](https://github.com/shyam100v/cs4641Project/blob/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
+
 
 ## Our Analysis and Insights
  do we need this section if we already mention the insights in each section above?
