@@ -99,9 +99,6 @@ In the graph, the darkest purple points represent the outliers or, in other word
 To conlcude our findings, we can see that the majority of videos do not rely on the characteristics of the video titles. For those that do have some correlation, we can see that the findings are the opposite of what we originally expected to see.
 
 
-## GradientBoostingRegressor
-
-
 
 
 ## Linear Regression
@@ -156,10 +153,19 @@ In the above graph, it can be seen that the lower the actual number of views a v
 
 In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed, especially on videos with extremely high view count. This is why this multiple regression model was so flat, because majority of videos actually have a relatively low view count no matter how they construct their video titles.
 
-## Our Analysis and Insights
- do we need this section if we already mention the insights in each section above?
 
-## Future Work (not sure what this section is for)
+## GradientBoostingRegressor
+
+
+
+## Our Analysis and Insights
+ The following is a summary of the key results and insights from the analyses that we carried out:
+
+## Future Work 
+
+The following are the possible directions in which we would have enhanced our work if we had more time:
+
+
 
 ## References:
 [1] Gill, Phillipa et al. "Youtube traffic characterization: a view from the edge." Proceedings of the 7th ACM SIGCOMM conference on Internet measurement. 2007. <br/>
