@@ -31,13 +31,6 @@ The csv format of final file that contains both Old and New data:
 |10. videoViews	      |   21. channelSubsCount	    |  32. publishedDayOfWeek	      |
 |11. videoLikes	      |   22. channelVideoCount	    |  33. newOrOldData             |
 
-
-
-| Left-aligned        | Center-aligned         | Right-aligned              |
-| :---                |     :---:              |                       ---: |
-| 1. regionTrending   | 12. videoDislikes      | 23. thumbnail_link	    |
-| 2. trendingRank     | 13. videoCommentCount  | 24. comments_disabled	    |
-
   
 Note the following for old data:
 1. Added a column trendingRank and made it 0 for all rows for old data
