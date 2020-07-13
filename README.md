@@ -19,39 +19,20 @@ There are duplicates in the old and new data. A lot of videos in old Data did no
 
 ### Data Format
 The csv format of final file that contains both Old and New data:
-
-1. regionTrending	
-2. trendingRank	
-3. timeFetched	4. videoId	
-5. videoTitle	
-6. videoCategoryId	
-7. videoPublishTime	
-8. videoDuration	
-9. videoTags	
-10.videoViews	
-11. videoLikes	
-12. videoDislikes	
-13. videoCommentCount	
-14. videoDescription	
-15. videoLicenced	
-16. channelTitle	
-17. channelId	
-18. channelDescription	
-19. channelPublishedAt	
-20. channelViewCount	
-21. channelSubsCount	
-22. channelVideoCount	
-23. thumbnail_link	
-24. comments_disabled	
-25. ratings_disabled	
-26. video_error_or_removed	
-27. publishDateCorrectFormat	
-28. trendingDateCorrectFormat	
-29. dayDifference 
-30. publishedZTime 
-31. publishedZTimeFloat	
-32. publishedDayOfWeek	
-33. newOrOldData
+|                  	   |                        |                               |
+| -------------------- | ---------------------- | ----------------------------- |
+|1. regionTrending	   |12. videoDislikes       |23. thumbnail_link	            |
+|2. trendingRank	     |13. videoCommentCount   |24. comments_disabled	        |
+|3. timeFetched	       |14. videoDescription    |25. ratings_disabled	          |
+|4. videoId	           |15. videoLicenced	      |26. video_error_or_removed	    |
+|5. videoTitle	       |16. channelTitle	      |27. publishDateCorrectFormat   |
+|6. videoCategoryId	   |17. channelId	          |28. trendingDateCorrectFormat  |	
+|7. videoPublishTime   |18. channelDescription  |29. dayDifference              |
+|8. videoDuration	     |19. channelPublishedAt  |30. publishedZTime             |
+|9. videoTags	         |20. channelViewCount    |31. publishedZTimeFloat	      |	
+|10. videoViews	       |21. channelSubsCount    |32. publishedDayOfWeek         |
+|11. videoLikes	       |22. channelVideoCount	  |33. newOrOldData               |
+	
 
   
 Note the following for old data:
@@ -86,6 +67,7 @@ From the scatter plots, we do can see number of views, likes, and dislikes are c
 ## DBSCAN
 **Publishing Times**\
 Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about 1:30 to 8:30 pm GMT; however, we did find many noise points and the clusters found were quite low in view count. 
+![dbscan_clusters](https://github.com/shyam100v/cs4641Project/blob/master/image/dbscan_clusters.PNG)
 
 **Video Titles**\
 One of our main expected outcomes for the overall analysis of youtube videos was that video titles with similar characteristics to clickbait titles would have a higher view count. The main quantifiable characteristics that we seemed to find in all clickbait titles were capital letters and punctuation marks such as exlcamations points and question marks. We also figured that the length of the title could play a role as longer titles can give more information on the context of the videos. Using these three characteristics as a starting point, we manipulated our data to quanitfy these characteristics and then used DBSCAN to cluster them. Hopefully, we would be able to see clear clusters and relationships between the characteristics and the number of views. The below graphs are the results.
