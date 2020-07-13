@@ -151,7 +151,7 @@ The model is trained and the feature importance is plotted. It is seen from the 
 ![featureImportance1](https://github.com/shyam100v/cs4641Project/blob/master/mdi1.png)
 
 After removing the number of likes and dislikes as features, the same analysis is repeated to find the most important predictors. It is seen that the channel subscriber count, the age of the video and the number of videos in the channel are the most important predictors.
-![featureImportance2](/mdi2.png)
+![featureImportance2](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/mdi2.png)
 
 
 
