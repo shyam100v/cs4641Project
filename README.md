@@ -18,45 +18,17 @@ There are duplicates in the old and new data. A lot of videos in old Data did no
 ### Data Format
 The csv format of final file that contains both Old and New data:
 
-1. regionTrending	        
-2. trendingRank	
-3. timeFetched	
-4. videoId	
-5. videoTitle	
-6. videoCategoryId	
-7. videoPublishTime	
-8. videoDuration	
-9. videoTags	
-10. videoViews	
-11. videoLikes	
-
-12. videoDislikes	
-13. videoCommentCount	
-14. videoDescription	
-15. videoLicenced	
-16. channelTitle	
-17. channelId	
-18. channelDescription	
-19. channelPublishedAt	
-20. channelViewCount	
-21. channelSubsCount	
-22. channelVideoCount	
-
-
-
-
-
-23. thumbnail_link	
-24. comments_disabled	
-25. ratings_disabled	
-26. video_error_or_removed	
-27. publishDateCorrectFormat	
-28. trendingDateCorrectFormat	
-29. dayDifference 
-30. publishedZTime 
-31. publishedZTimeFloat	
-32. publishedDayOfWeek	
-33. newOrOldData
+1. regionTrending	        12. videoDislikes	          23. thumbnail_link	
+2. trendingRank	          13. videoCommentCount	      24. comments_disabled
+3. timeFetched	          14. videoDescription        25. ratings_disabled	
+4. videoId	              15. videoLicenced	          26. video_error_or_removed
+5. videoTitle	            16. channelTitle            27. publishDateCorrectFormat	
+6. videoCategoryId	      17. channelId	              28. trendingDateCorrectFormat	
+7. videoPublishTime	      18. channelDescription	    29. dayDifference 
+8. videoDuration	        19. channelPublishedAt	    30. publishedZTime 
+9. videoTags	            20. channelViewCount        31. publishedZTimeFloat	
+10. videoViews	          21. channelSubsCount	      32. publishedDayOfWeek	
+11. videoLikes	          22. channelVideoCount	      33. newOrOldData
 
 
 
