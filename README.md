@@ -111,7 +111,11 @@ From the scatter plots, we do can see number of views, likes, and dislikes are c
 **Publishing Times**\
 Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about __1:30 to 8:30 pm GMT__; however, we did find many noise points and the clusters found were quite low in view count. (see [code)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/DBSCAN_publishingHour.ipynb)
 
-![dbscan_clusters](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG">
+	<br>
+	  Figure X: DBSCAN Hour Published
+</p>
 
 **Video Titles**\
 After using DBSCAN clustering on three different characteristics of a video title (length, number of capital letters,and  number of exclamation/question marks) we can see that the results in the graphs below are different than we originally expected. (see [code](https://aw.githubusercontent.com/shyam100v/cs4641Project/master/title_analysis.py))
@@ -156,11 +160,19 @@ Using this 3 histograms above, a linear regression of the log number of views ve
 
 ## Multiple Regression
 **Data Modifications**\
-Data regarding number of views was originally very skewed, so we removed any data points that were more than one standard deviation away from the mean and took the log of the number of views. This resulted in a Gausian ditribution for the number of views, which is ideal for any modeling. The below graphs show the data distribution before and after applying the log function. 
+Data regarding number of views was originally very skewed, so we removed any data points that were more than one standard deviation away from the mean and took the log of the number of views. This resulted in a Gaussian distribution for the number of views, which is ideal for any modeling. The below graphs show the data distribution before and after applying the log function. 
 
-![Views before log function](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewskew.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewskew.png">
+	<br>
+	  Figure X: Multiple Regression Skewed Data
+</p>
 
-![Views after log function](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewlog.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewlog.png">
+	<br>
+	  Figure X: Multiple Regression Modified Data
+</p>
 
 **Multiple Regression Analysis**\
 We used three parameters versus the number of views on a video (title length, number of capital letters, number of punctuations marks). This would have resulted in a 3-dimensional regression model in a 4-dimensional space. As it is difficult to understand a 4-dimensional model, the following graphs show the regression models of just two parameters each versus the log of the number of views. (see [code](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/Multiple%20Regression%20(Video%20Title%20Analysis).ipynb))
