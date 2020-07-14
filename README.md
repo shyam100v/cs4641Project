@@ -159,6 +159,9 @@ Using this 3 histograms above, a linear regression of the log number of views ve
 ![Linear regression of log views versus log dislikes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20dislikes.PNG)
 ![Linear regression of log views versus log likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
 
+When performing the same analysis with other features, an R^2 close to 0 is obtained.
+![Views versus Title Length](https://github.com/shyam100v/cs4641Project/blob/master/image/Views%20versus%20Title%20Length.PNG)
+
 ## Multiple Regression
 **Data Modifications**\
 Data regarding number of views was originally very skewed, so we removed any data points that were more than one standard deviation away from the mean and took the log of the number of views. This resulted in a Gaussian distribution for the number of views, which is ideal for any modeling. The below graphs show the data distribution before and after applying the log function. 
