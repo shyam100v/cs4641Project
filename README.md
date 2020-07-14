@@ -110,7 +110,7 @@ From the scatter plots, we do can see number of views, likes, and dislikes are c
 
 ## DBSCAN
 **Publishing Times**\
-Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about __1:30 to 8:30 pm GMT__; however, we did find many noise points and the clusters found were quite low in view count. (see [code)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/DBSCAN_publishingHour.ipynb)
+Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about __1:00 pm to 7:00 pm GMT pm GMT__ with the peak time between __5:00 pm - 7:00 pm__; however, we did find many noise points and the clusters found were quite low in view count. (see [code)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/DBSCAN_publishingHour.ipynb)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG">
@@ -266,7 +266,7 @@ From the analyses we carried out, following are the key insights and results:
 
 1. __Categories with high number of views__: Film & Animation, Music, Entertainment and News and Politics.
 2. __Categories with least number of views__: Nonprofits & Activism and Shorts
-3. __1:00 pm to 7:00 pm GMT__ is a popular time frame to publish videos so they trend, especially between 5:00 pm-7:00 pm. There is __no optimal title length. Less to none captial letters and punctuation__ in video title is optimal.
+3. __1:00 pm to 7:00 pm GMT__ is a popular time frame to publish videos so they trend, especially between 5:00 pm-7:00 pm. There is __no optimal title length. Fewer (or none) captial letters and punctuation__ in video title is optimal.
 4. There is a relationship between number of dislikes, number of likes, and number of views.
 5. The video title plays a __minor role__ in the popularity of the most popular videos. But, for the less exposed or advertised videos, keeping to minimal capital letters and punctuation can help boost views slightly. 
 6. The __channel's popularity__ plays a major role in determining the popularity of a video. Particularly, the __channel subscriber and view count, age of channel and channel video count__ are dominant factors.
