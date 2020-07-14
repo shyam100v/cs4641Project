@@ -10,7 +10,7 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 We want to help people __make money__ on YouTube by increasing their popularity on the platform!
 
 -> PCA:                             <br/>
--> DBSCAN: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title     <br/>
+-> DBSCAN: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
 -> Linear Regression:               <br/>
 -> Multiple Regression:             <br/>
 -> Gradient Boosting Regressor:     <br/>
