@@ -71,7 +71,7 @@ Using DBSCAN clustering on the video views and publishing time features, we can 
 ![dbscan_clusters](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG)
 
 **Video Titles**\
-After using DBSCAN clustering on three different characteristics of a video title (length, number of capital letters,and  number of exclamation/question marks) we can see that the results in the graphs below are different than we originally expected.
+After using DBSCAN clustering on three different characteristics of a video title (length, number of capital letters,and  number of exclamation/question marks) we can see that the results in the graphs below are different than we originally expected. (see [code](https://aw.githubusercontent.com/shyam100v/cs4641Project/master/title_analysis.py))
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Title_Length_DBSCAN.png">
@@ -128,31 +128,54 @@ Using this 3 histograms above, a linear regression of the log number of views ve
 ![Linear regression of log views versus log likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
 
 ## Multiple Regression
-First we loaded our data and calculated the needed parameters from the given titles(length, number of capital letters, number of exclamation/question marks). As our data was originally very skewed, we removed any data points that were more than one standard deviation away from the mean and took the log of the number of views. This resulted in a Gausian ditribution for the number of views, which is ideal for any modeling. The below graphs show the data distribution before and after applying the log function. 
+**Data Modifications**\
+Data regarding number of views was originally very skewed, so we removed any data points that were more than one standard deviation away from the mean and took the log of the number of views. This resulted in a Gausian ditribution for the number of views, which is ideal for any modeling. The below graphs show the data distribution before and after applying the log function. 
 
 ![Views before log function](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewskew.png)
 
 ![Views after log function](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewlog.png)
 
-Now that our data is better suited for analysis, we can apply the regression analysis. Since we used three parameters versus the number of views on a video, it would have resulted in a 3-dimensional regression model in a 4-dimensional space. As it is difficult to understand a 4-dimensional model, the following graphs show the regression models of just two parameters each versus the log of the number of views of the videos in order to give an overall picture.
+**Multiple Regression Analysis**\
+We used three parameters versus the number of views on a video (title length, number of capital letters, number of punctuations marks). This would have resulted in a 3-dimensional regression model in a 4-dimensional space. As it is difficult to understand a 4-dimensional model, the following graphs show the regression models of just two parameters each versus the log of the number of views. (see [code](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/Multiple%20Regression%20(Video%20Title%20Analysis).ipynb))
 
-![length vs caps](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_lengthcapsreg.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_lengthcapsreg.png">
+	<br>
+	  Figure X: Multiple Regression Length vs Number of Capital Letters
+</p>
 
-![length vs puncs](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_lengthpuncsreg.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_lengthpuncsreg.png">
+	<br>
+	  Figure X: Multiple Regression Length vs Number of Punctuation Marks
+</p>
 
-![caps vs puncs](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_capspuncsreg.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_capspuncsreg.png">
+	<br>
+	  Figure X: Multiple Number of Capital Letters vs Number of Punctuation Marks
+</p>
 
 As can be seen above, the grey plane in each of the graphs is the regression model that fits the set of data points the best. Since our data points are fairly spread out and do not show much correlation to the number of views, the fitted planes are relatively flat, and center around the area where most of the data points are in order to at least fit for a majority of videos. 
 
+**Result Analysis**\
 As a representation of the accuracy of our model, the below graph shows a comparison of the actual number views versus the predicted number of views for a random set of data points.
 
-![predicted vs actual](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_predvsact.png)
+</p>
 
-As we can see here, the model tends to predict within the 200000 to 400000 views range, and this is probably due to the very flat model that can be seen in the previous graphs. Though the model seems to overestimate the number of views for anything below 300000 views, it is actually proportional in a sense and predicts slighty less for those with less views and predicts slightly more for those with more views. Now, since it can be seen that the videos with a high number of views have very low predictions, we also calculated the error of the preditcions of videos with different ranges of views.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_predvsact.png">
+	<br>
+	  Figure X: Predicted Views vs Actual Views
+</p>
 
-![accuracy](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_accuracy.png)
+In the below graph, where it shows the error in prediction based on the number of actual views, it can be seen that the lower the actual number of views a video has, the more accurate this model will be in its predictions. 
 
-In the above graph, it can be seen that the lower the actual number of views a video has, the more accurate this model will be in its predictions. 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_accuracy.png">
+	<br>
+	  Figure X: Multiple Regression Model Accuracy
+</p>
 
 In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed and have an incredibly low correlation, especially on videos with extremely high view count.
 
@@ -199,7 +222,7 @@ From the analyses we carried out, following are the key insights and results:
 1. bla
 2. __1:30 to 8:30 pm GMT__ is a popular time frame to publish videos so they trend. There is __no optimal title length. Less to none captial letters and punctuation__ in video title is optimal.
 3. bla
-4. bla
+4. The video title plays a __minor role__ in the popularity of the most popular videos. But, for the less exposed or advertised videos, keeping to minimal capital letters and punctuation can help boost views slightly. 
 5. The __channel's popularity__ plays a major role in determining the popularity of a video. Particularly, the __channel subscriber and view count, age of channel and channel video count__ are dominant factors.
 
 
