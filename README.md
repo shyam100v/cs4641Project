@@ -53,7 +53,7 @@ First, an analysis of the correlation between different variables was performed.
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Correlation%20table.PNG">
 	<br>
-	  Figure X: Correlation Table
+	  Figure 1: Correlation Table
 </p>
 
 **Statistical Summary**\
@@ -61,7 +61,7 @@ Then, a statistical summary of each of our variables was obtained. This analysis
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/max-min-std.PNG">
 	<br>
-	  Figure X: Statistical Summary
+	  Figure 2: Statistical Summary
 </p>
 
 **Category ID Analysis**\
@@ -71,7 +71,7 @@ __Catergories with least number of views__: Nonprofits & Activism and Shorts
 <p align="center">
   <img src="https://github.com/shyam100v/cs4641Project/blob/master/image/CategoryID.PNG">
 	<br>
-	  Figure X: Views versus Category ID
+	  Figure 3: Views versus Category ID
 </p>
 
 ## Principal Component Analysis(PCA)
@@ -82,7 +82,7 @@ We combined all 12 features into a training dataset and apply PCA. PCA was used 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_variance.PNG">
 	<br>
-	  Figure X: PCA variance plot
+	  Figure 4: PCA variance plot
 </p>
 
 From the plot, we can see that at 6 components, we will get a desired cumulative explained variance(0.9). We also made two component PCA scatter plots to give us some visualizations.
@@ -90,19 +90,19 @@ From the plot, we can see that at 6 components, we will get a desired cumulative
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_views.PNG">
 	<br>
-	  Figure X: PCA number of views plot
+	  Figure 5: PCA number of views plot
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_likes.PNG">
 	<br>
-	  Figure X: PCA number of likes plot
+	  Figure 6: PCA number of likes plot
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_dislikes.PNG">
 	<br>
-	  Figure X: PCA number of dislikes plot
+	  Figure 7: PCA number of dislikes plot
 </p>
 
 From the scatter plots, we do can see number of views, likes, and dislikes are correlated. Low number of views, low number of likes, and low number of dislikes are all clustered at the middle-left part of the graph.
@@ -114,7 +114,7 @@ Using DBSCAN clustering on the video views and publishing time features, we can 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG">
 	<br>
-	  Figure X: DBSCAN Hour Published
+	  Figure 8.1: DBSCAN Hour Published
 </p>
 
 **Video Titles**\
@@ -123,19 +123,19 @@ After using DBSCAN clustering on three different characteristics of a video titl
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Title_Length_DBSCAN.png">
 	<br>
-	  Figure X: DBSCAN Title Length
+	  Figure 8.2: DBSCAN Title Length
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Num_Caps_DBSCAN.png">
 	<br>
-	  Figure X: DBSCAN Capital Letters
+	  Figure 8.3: DBSCAN Capital Letters
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Num_Puncs_DBSCAN.png">
 	<br>
-	  Figure X: DBSCAN Punctuation Marks
+	  Figure 8.4: DBSCAN Punctuation Marks
 </p>
 
 The clusters for majority of the graphs are evenly distributed along the x axis, showing very little correlation to the number of views. But, there are a couple clusters higher up on the graph that show that titles with lengths around 40 characters, minimal capital letters, and minimal punctuation marks are the videos accumulating more views. As a conclusion, there is little relation seen between the factors, but there is some evidence pointing to certain title formats.
@@ -165,13 +165,13 @@ Data regarding number of views was originally very skewed, so we removed any dat
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewskew.png">
 	<br>
-	  Figure X: Multiple Regression Skewed Data
+	  Figure 9: Multiple Regression Skewed Data
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewlog.png">
 	<br>
-	  Figure X: Multiple Regression Modified Data
+	  Figure 10: Multiple Regression Modified Data
 </p>
 
 **Multiple Regression Analysis**\
@@ -180,19 +180,19 @@ We used three parameters versus the number of views on a video (title length, nu
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_lengthcapsreg.png">
 	<br>
-	  Figure X: Multiple Regression Length vs Number of Capital Letters
+	  Figure 11: Multiple Regression Length vs Number of Capital Letters
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_lengthpuncsreg.png">
 	<br>
-	  Figure X: Multiple Regression Length vs Number of Punctuation Marks
+	  Figure 12: Multiple Regression Length vs Number of Punctuation Marks
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_capspuncsreg.png">
 	<br>
-	  Figure X: Multiple Number of Capital Letters vs Number of Punctuation Marks
+	  Figure 13: Multiple Number of Capital Letters vs Number of Punctuation Marks
 </p>
 
 As can be seen above, the grey plane in each of the graphs is the regression model that fits the set of data points the best. Since our data points are fairly spread out and do not show much correlation to the number of views, the fitted planes are relatively flat, and center around the area where most of the data points are in order to at least fit for a majority of videos. 
@@ -205,7 +205,7 @@ As a representation of the accuracy of our model, the below graph shows a compar
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_predvsact.png">
 	<br>
-	  Figure X: Predicted Views vs Actual Views
+	  Figure 14: Predicted Views vs Actual Views
 </p>
 
 In the below graph, where it shows the error in prediction based on the number of actual views, it can be seen that the lower the actual number of views a video has, the more accurate this model will be in its predictions. 
@@ -213,7 +213,7 @@ In the below graph, where it shows the error in prediction based on the number o
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_accuracy.png">
 	<br>
-	  Figure X: Multiple Regression Model Accuracy
+	  Figure 15: Multiple Regression Model Accuracy
 </p>
 
 In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed and have an incredibly low correlation, especially on videos with extremely high view count.
@@ -228,7 +228,7 @@ __Model used__: The [sklearn.ensemble.GradientBoostingRegressor model](https://s
 __Data Preparation__: The data collected using the __YouTube API__ is used to train and test the model with the logarithm of number of views of a video as the target label. Only the videos that have a view count between 1000 and 10 million are used. Sample of the data used is shown:
 
 <p align="center">
-  <img height = "500" width = "500"  src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png">
+  <img height = "450" width = "500"  src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png">
 	<br>
 	  Sample of data for analysis
 </p>
