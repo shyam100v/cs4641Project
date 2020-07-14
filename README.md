@@ -24,11 +24,11 @@ We also augment the available data with our own data scavenged from YouTube usin
 
 
 ## Cleaning up the data
-1. __Languages__: Youtube fosters content from all around the world in numerous languages. We discard video entries in the dataset that do not have English titles to easier analyze the data. (see [code)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/CleanData_RemovingNonEnglish.ipynb)
-2. __Handling duplicates__: Several videos are in trending charts for multiple days. In order to not skew the data, we retain only one copy of each video with the highest number of views.
-3. __Null entries__: We have also removed videos with ratings disables and comments disabled.
-4. __Handling dates and time__: We parse the dates and times in YouTube's native format to formats suitable for machine learning algorithms (floats and integets) (see [code](https://github.com/shyam100v/cs4641Project/blob/master/ParseTimeAndDatesImproved))
-5. __Handling outliers__: To gain insights for a majority of the data, any data points that were outside +/-2 standard deviations from the mean were eliminated.
+1. __Languages__: Youtube fosters content from all around the world in numerous languages. We discarded video entries in the dataset that do not have English titles to facilitate the analysis of the data. (see [code)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/CleanData_RemovingNonEnglish.ipynb)
+2. __Handling duplicates__: Several videos are in trending charts for multiple days. Therefore, we retained only one copy of each video, the version with the highest number of views.
+3. __Null entries__: videos with ratings disabled and comments disabled were removed.
+4. __Handling dates and time__: We parsed the dates and times in YouTube's native format to formats suitable for machine learning algorithms (floats and integets) (see [code](https://github.com/shyam100v/cs4641Project/blob/master/ParseTimeAndDatesImproved))
+5. __Handling outliers__: To gain insights for the majority of the data, any data points that were outside +/-2 standard deviations from the mean were eliminated.
 
 ### Data Format
 The csv format of final file that contains both Old and New data:
