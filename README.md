@@ -160,7 +160,7 @@ Using this 3 histograms above, a linear regression of the log number of views ve
 ![Linear regression of log views versus log likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
 
 
-This analysis was only performed on these 2 variables since no other variables appear to correlate with the number of views of a video. For exmaple, when performing the linear regression of views versus the title length, an R^2 close to 0 is obtained.
+This analysis was only performed on these 2 variables since no other variables appear to correlate with the number of views of a video. For example, when performing the linear regression of views versus the title length, an R^2 close to 0 is obtained.
 
 ![Views versus Title Length](https://github.com/shyam100v/cs4641Project/blob/master/image/Views%20versus%20Title%20Length.PNG)
 
