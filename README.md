@@ -166,7 +166,7 @@ This analysis was only performed on these 2 variables since no other variables a
 
 ## Multiple Regression
 **Data Modifications**\
-Data regarding number of views was originally very skewed, so we removed any data points that were more than one standard deviation away from the mean and took the log of the number of views. This resulted in a Gaussian distribution for the number of views, which is ideal for any modeling. The below graphs show the data distribution before and after applying the log function. 
+Data regarding number of views was originally very skewed, so we removed any outliers and took the log of the number of views. This resulted in a Gaussian distribution for the number of views, which is ideal for any modeling. The below graphs show the data distribution before and after applying the log function. 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewskew.png">
