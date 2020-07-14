@@ -291,7 +291,12 @@ The following are a few possible directions in which our work can be extended:
 2. Deeper analysis of relation between channel popularity and video popularity
 3. Estimating potential size of audience for a given video type (Music, Movie trailer, etc), language among other features.
 
-
+## Individual Contributions
+Carla: Data Analysis, Cleaning data and Linear Regression <br/>
+Yuqi: Principal Comppnent Analysis <br/>
+Preethi: DBSCAN and Multiple Regressor <br/>
+Divya: Cleaning data and DBSCAN <br/>
+Shyam: Cleaning/Augmenting data and Gradient Boosting Regressor <br/>
 
 ## References:
 [1] Gill, Phillipa et al. "Youtube traffic characterization: a view from the edge." Proceedings of the 7th ACM SIGCOMM conference on Internet measurement. 2007. <br/>
