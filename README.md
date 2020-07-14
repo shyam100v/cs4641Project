@@ -12,7 +12,7 @@ We want to help people __make money__ on YouTube by increasing their popularity 
 -> PCA:                             <br/>
 -> DBSCAN: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
 -> Linear Regression:               <br/>
--> Multiple Regression: to predict the popularity of a video solely based in the __title's characteristics__(length, capital letters, and puctuation<br/>
+-> Multiple Regression: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation<br/>
 -> Gradient Boosting Regressor:     <br/>
 
 ## Dataset: 
