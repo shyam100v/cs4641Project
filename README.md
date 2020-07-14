@@ -27,7 +27,7 @@ We also augment the available data with our own data scavenged from YouTube usin
 1. __Languages__: Youtube fosters content from all around the world in numerous languages. We discard video entries in the dataset that do not have English titles to easier analyze the data. (see [code)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/CleanData_RemovingNonEnglish.ipynb)
 2. __Handling duplicates__: Several videos are in trending charts for multiple days. In order to not skew the data, we retain only one copy of each video with the highest number of views.
 3. __Null entries__: We have also removed videos with ratings disables and comments disabled.
-4. __Handling dates and time__: We parse the dates and times in YouTube's native format to formats suitable for machine learning algorithms (floats and integets)
+4. __Handling dates and time__: We parse the dates and times in YouTube's native format to formats suitable for machine learning algorithms (floats and integets) (see [code](https://github.com/shyam100v/cs4641Project/blob/master/ParseTimeAndDatesImproved))
 5. __Handling outliers__: To gain insights for a majority of the data, outliers were removed using hard thresholds and by using the mean and standard deviation. 
 
 ### Data Format
@@ -66,8 +66,11 @@ Then, a statistical summary of each of our variables was obtained. This analysis
 
 **Category ID Analysis**\
 The category ID represents the content of the video (Click [here](https://gist.github.com/dgp/1b24bf2961521bd75d6c) to see the different cateories). 
+
 __Categories with high number of views__: Film & Animation, Music, News and Politics, and Entertainment
+
 __Catergories with least number of views__: Nonprofits & Activism and Shorts
+
 <p align="center">
   <img src="https://github.com/shyam100v/cs4641Project/blob/master/image/CategoryID.PNG">
 	<br>
