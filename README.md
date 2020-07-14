@@ -9,11 +9,11 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 
 We want to help people __make money__ on YouTube by increasing their popularity on the platform!
 
--> PCA: 
--> DBSCAN: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title
--> Linear Regression:
--> Multiple Regression:
--> Gradient Boosting Regressor:
+-> PCA:                             <br/>
+-> DBSCAN: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title     <br/>
+-> Linear Regression:               <br/>
+-> Multiple Regression:             <br/>
+-> Gradient Boosting Regressor:     <br/>
 
 ## Dataset: 
 -> https://www.kaggle.com/datasnaek/youtube-new <br/>
@@ -24,7 +24,7 @@ We also augment the available data with our own data scavenged from YouTube usin
 
 
 ## Cleaning up the data
-1. __Languages__: Youtube fosters content from all around the world in numerous languages. We discard video entries in the dataset that do not have English titles to easier analyze the data. (code [here)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/CleanData_RemovingNonEnglish.ipynb)
+1. __Languages__: Youtube fosters content from all around the world in numerous languages. We discard video entries in the dataset that do not have English titles to easier analyze the data. (see [code)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/CleanData_RemovingNonEnglish.ipynb)
 2. __Handling duplicates__: Several videos are in trending charts for multiple days. In order to not skew the data, we retain only one copy of each video with the highest number of views.
 3. __Null entries__: We have also removed videos with ratings disables and comments disabled.
 4. __Handling dates and time__: We parse the dates and times in YouTube's native format to formats suitable for machine learning algorithms (floats and integets)
@@ -66,7 +66,7 @@ From the scatter plots, we do can see number of views, likes, and dislikes are c
 
 ## DBSCAN
 **Publishing Times**\
-Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about __1:30 to 8:30 pm GMT__; however, we did find many noise points and the clusters found were quite low in view count. (code [here)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/DBSCAN_publishingHour.ipynb)
+Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about __1:30 to 8:30 pm GMT__; however, we did find many noise points and the clusters found were quite low in view count. (see [code)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/DBSCAN_publishingHour.ipynb)
 
 ![dbscan_clusters](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG)
 
@@ -187,10 +187,10 @@ It is seen that the channel subscriber count, the number of videos, total views 
 From the analyses we carried out, following are the key insights and results:
 
 1. bla
-2. 1:30 to 8:30 pm GMT is a popular time frame to publish videos so they trend. There is no optimal title length. Less to none captial letters and punctuation in video title is optimal.
+2. __1:30 to 8:30 pm GMT__ is a popular time frame to publish videos so they trend. There is __no optimal title length. Less to none captial letters and punctuation__ in video title is optimal.
 3. bla
 4. bla
-5. The channel's popularity plays a major role in determining the popularity of a video. Particularly, the channel subscriber and view count, age of channel and channel video count are dominant factors.
+5. The __channel's popularity__ plays a major role in determining the popularity of a video. Particularly, the __channel subscriber and view count, age of channel and channel video count__ are dominant factors.
 
 
 ## Future Work 
