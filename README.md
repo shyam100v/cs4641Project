@@ -110,7 +110,7 @@ From the scatter plots, we do can see number of views, likes, and dislikes are c
 
 ## DBSCAN
 **Publishing Times**\
-Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about __1:00 pm to 7:00 pm GMT pm GMT__ with the peak time between __5:00 pm - 7:00 pm__; however, we did find many noise points and the clusters found were quite low in view count. (see [code)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/DBSCAN_publishingHour.ipynb)
+Using DBSCAN clustering on the video views and publishing time features, we can see that the optimal time frame to publish videos on YouTube is from about __1:00 pm to 7:00 pm GMT__ with the peak time between __5:00 pm - 7:00 pm__; however, we did find many noise points and the clusters found were quite low in view count. (see [code)](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/DBSCAN_publishingHour.ipynb)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dbscan_clusters.PNG">
