@@ -9,7 +9,7 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 
 We want to help people __monetize their content more effectively__ on YouTube by increasing their popularity on the platform! To that end, we carry out the following analyses:
 
-1. __PCA__:                             <br/>
+1. __PCA__: to reduce dimension of features through capturing variation and visualize correlation between different features            <br/>
 2. __DBSCAN__: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
 3. __Linear Regression__:  find any other existing __correlations__ and predict the views based upon any other correlated features            <br/>
 4. __Multiple Regression__: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation)<br/>
@@ -79,13 +79,31 @@ We selected some properties from original video dataset as features of videos, i
 
 We combined all 12 features into a training dataset and apply PCA. PCA was used to reduce the dimension of features through capturing variation. Here is the cumulative explained variance plot. 
 
-![pca_variance](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_variance.PNG)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_variance.PNG">
+	<br>
+	  Figure X: PCA variance plot
+</p>
 
 From the plot, we can see that at 6 components, we will get a desired cumulative explained variance(0.9). We also made two component PCA scatter plots to give us some visualizations.
 
-![pca_views](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_views.PNG)
-![pca_likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_likes.PNG)
-![pca_dislikes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_dislikes.PNG)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_views.PNG">
+	<br>
+	  Figure X: PCA number of views plot
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_likes.PNG">
+	<br>
+	  Figure X: PCA number of likes plot
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_dislikes.PNG">
+	<br>
+	  Figure X: PCA number of dislikes plot
+</p>
 
 From the scatter plots, we do can see number of views, likes, and dislikes are correlated. Low number of views, low number of likes, and low number of dislikes are all clustered at the middle-left part of the graph.
 
@@ -231,7 +249,7 @@ From the analyses we carried out, following are the key insights and results:
 1. __Categories with high number of views__: Film & Animation, Music, Entertainment and News and Politics.
 2. __Catergories with least number of views__: Nonprofits & Activism and Shorts
 3. __1:30 to 8:30 pm GMT__ is a popular time frame to publish videos so they trend. There is __no optimal title length. Less to none captial letters and punctuation__ in video title is optimal.
-4. bla
+4. We can see there is a relationship between low number of dislikes, low number of likes, and low number of views.
 5. The video title plays a __minor role__ in the popularity of the most popular videos. But, for the less exposed or advertised videos, keeping to minimal capital letters and punctuation can help boost views slightly. 
 6. The __channel's popularity__ plays a major role in determining the popularity of a video. Particularly, the __channel subscriber and view count, age of channel and channel video count__ are dominant factors.
 
