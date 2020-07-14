@@ -98,17 +98,7 @@ Then, a statistical summary of each of our variables was obtained. This analysis
 **Histograms**\
 Based on the table above, the data for the number of views, likes and dislikes was modified to remove any data points that were outside 2 standard deviations from their respective mean. Then, a basic histogram of the number of views, likes and dislikes was plotted. As it is appreciated on the graphs below, the three graphs are heavily skewed which is understandable — most common YouTubers probably won’t have that many views, likes and dislikes. Ideally, the data should resemble a Gaussian distribution. Luckily, a log tranformation can be applied to the number of views, likes and dislikes to achieve that.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Number%20of%20views%20without%20logs.PNG">
-	<br>
-	  Figure X: Histogram of the number of views
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Number%20of%20dislikes%20without%20logs.PNG">
-	<br>
-	  Figure X: Histogram of the number of dislikes
-</p>
+![Number of views without logs](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Number%20of%20views%20without%20logs.PNG)
 ![Number of dislikes without logs](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Number%20of%20dislikes%20without%20logs.PNG)
 ![Number of likes without logs](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Number%20of%20likes%20without%20logs.PNG)
 ![Log number of dislikes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Log%20number%20of%20dislikes.PNG)
