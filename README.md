@@ -236,7 +236,7 @@ __Data Preparation__: The data collected using the __YouTube API__ is used to tr
 <p align="center">
   <img height = "450" width = "500"  src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png">
 	<br>
-	  Sample of data for analysis
+	  Figure 16: Sample of data for analysis
 </p>
 
 __Model performance and Feature importance__
@@ -246,7 +246,7 @@ With all the above listed features, the model has an RMSE of __772445__ views. W
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi1.png">
 	<br>
-	  Feature importance-1
+	  Figure 17: Feature importance-1
 </p>
 
 While this is intuitive, this does not serve as a good model for prediction since likes, dislikes, age of video and comments are not known in advance. After removing these features, the feature importance is plotted below:
@@ -254,7 +254,7 @@ While this is intuitive, this does not serve as a good model for prediction sinc
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi3.png">
 	<br>
-	  Feature importance-2
+	  Figure 18: Feature importance-2
 </p>
 
 
