@@ -106,7 +106,7 @@ From the plot, we can see that at 6 components, we will get a desired cumulative
 	  Figure 7: PCA number of dislikes plot
 </p>
 
-From the scatter plots, we do can see number of views, likes, and dislikes are correlated. Low number of views, low number of likes, and low number of dislikes are all clustered at the middle-left part of the graph.
+From the scatter plots, we can see number of views, likes, and dislikes are correlated. Low number of views, low number of likes, and low number of dislikes are all clustered at the middle-left part of the graph.
 
 ## DBSCAN
 **Publishing Times**\
