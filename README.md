@@ -141,7 +141,8 @@ __Model used__: The [sklearn.ensemble.GradientBoostingRegressor model](https://s
 __Data Preparation__: The data collected using the __YouTube API__ is used to train and test the model with the logarithm of number of views of a video as the target label. Only the videos that have a view count between 1000 and 10 million are used. Sample of the data used is shown:
 
 <p align="center">
-  <src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png">
+	<br>
 	  Sample of data for analysis
 </p>
 
@@ -150,14 +151,16 @@ __Model performance and Feature importance__
 With all the above listed features, the model has an RMSE of __772445__ views. We infer from the plot that the number of likes and dislikes are the most important features in predicting the number of views. 
 
 <p align="center">
-  <src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi1.png">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi1.png">
+	<br>
 	  Feature importance-1
 </p>
 
 While this is intuitive, this does not serve as a good model for prediction since likes, dislikes, age of video and comments are not known in advance. After removing these features, the feature importance is plotted below:
 
 <p align="center">
-  <src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi3.png">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi3.png">
+	<br>
 	  Feature importance-2
 </p>
 
