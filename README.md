@@ -108,6 +108,16 @@ Based on the table above, the data for the number of views, likes and dislikes w
 **Linear Regression**\
 Using this 3 histograms above, a linear regression of the log number of views versus the log number of likes and dislikes can be plotted. As expected, both correlations show an R^2 greater than 0.6, showing a big correlation between both the number of likes and dislikes and the number of views of a video. This analysis was only performed on these 2 variables since no other variables appear to correlate with the number of views of a video
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20dislikes.PNG">
+	<br>
+	  Figure X: Linear regression of log views versus log dislikes
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG">
+	<br>
+	  Figure X: Linear regression of log views versus log likes
+</p>
 ![Linear regression of log views versus log dislikes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20dislikes.PNG)
 ![Linear regression of log views versus log likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
 
