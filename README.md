@@ -11,7 +11,7 @@ We want to help people __monetize their content more effectively__ on YouTube by
 
 -> PCA:                             <br/>
 -> DBSCAN: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
--> Linear Regression:               <br/>
+-> Linear Regression:  find any other existing correlations and "predict" the views based upon any other correlated features            <br/>
 -> Multiple Regression: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation)<br/>
 -> Gradient Boosting Regressor: To build an ensemble regressor to predict the number of views and __rank feature importances__    <br/>
 
