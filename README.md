@@ -222,7 +222,7 @@ In the below graph, where it shows the error in prediction based on the number o
 	  Figure 15: Multiple Regression Model Accuracy
 </p>
 
-In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed and have an incredibly low correlation, especially on videos with extremely high view count.
+In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed and has an incredibly low correlation with the number of views, especially on videos with extremely high view count.
 
 
 ## Gradient Boosting Regressor
