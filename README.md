@@ -9,7 +9,7 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 
 We want to help people __monetize their content more effectively__ on YouTube by increasing their popularity on the platform! To that end, we carry out the following analyses:
 
-1. __PCA__: to reduce dimension of features through capturing variation and visualize correlation between different features            <br/>
+1. __PCA__: to __reduce dimension of features__ through capturing variation and visualize correlation between different features            <br/>
 2. __DBSCAN__: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
 3. __Linear Regression__:  find any other existing __correlations__ and predict the views based upon any other correlated features            <br/>
 4. __Multiple Regression__: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation)<br/>
@@ -66,9 +66,7 @@ Then, a statistical summary of each of our variables was obtained. This analysis
 
 **Category ID Analysis**\
 The category ID represents the content of the video (Click [here](https://gist.github.com/dgp/1b24bf2961521bd75d6c) to see the different cateories). 
-
 * __Categories with high number of views__: Film & Animation, Music, News and Politics, and Entertainment
-
 * __Catergories with least number of views__: Nonprofits & Activism and Shorts
 
 <p align="center">
