@@ -5,6 +5,9 @@ Contributors (in alphabetical order): [Carla Lorente Anon](https://github.com/Ca
 ## Introduction/Background:
 YouTube is an online video-sharing platform with billions of users, posting and watching content for entertainment and education. YouTube monetizes popular videos for the number of views as it increases the use and popularity of the platform itself. With our project, we hope to provide insights on how to make money on YouTube by analyzing trending video features and predicting the popularity of a video given certain features. 
 
+## Motivation and methods
+
+Divya - write something here
 
 ## Dataset: 
 -> https://www.kaggle.com/datasnaek/youtube-new <br/>
@@ -137,20 +140,39 @@ __Model used__: The [sklearn.ensemble.GradientBoostingRegressor model](https://s
 
 __Data Preparation__: The data collected using the __YouTube API__ is used to train and test the model with the logarithm of number of views of a video as the target label. Only the videos that have a view count between 1000 and 10 million are used. Sample of the data used is shown:
 
-![dataSample](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png)
+<p align="center">
+  <src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png">
+	  Sample of data for analysis
+</p>
 
 __Model performance and Feature importance__
 
 With all the above listed features, the model has an RMSE of __772445__ views. We infer from the plot that the number of likes and dislikes are the most important features in predicting the number of views. 
 
-![featureImportance1](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi1.png)
+<p align="center">
+  <src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi1.png">
+	  Feature importance-1
+</p>
 
 While this is intuitive, this does not serve as a good model for prediction since likes, dislikes, age of video and comments are not known in advance. After removing these features, the feature importance is plotted below:
 
-![featureImportance2](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi3.png)*Feature importance 2*
+<p align="center">
+  <src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi3.png">
+	  Feature importance-2
+</p>
+
 
 It is seen that the channel subscriber count, the number of videos, total views on the channel, and age of the channel are the most important predictors. 
 
+## Conclusion
+
+From the analyses we carried out, following are the key insights and results:
+
+1. bla
+2. bla
+3. bla
+4. bla
+5. The channel's popularity plays a major role in determining the popularity of a video. Particularly, the channel subscriber and view count, age of channel and channel video count are dominant factors.
 
 
 ## Future Work 
