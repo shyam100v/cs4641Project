@@ -9,7 +9,7 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 
 We want to help people __monetize their content more effectively__ on YouTube by increasing their popularity on the platform! To that end, we carry out the following analyses:
 
-1. __PCA__: to reduce dimension of features through capturing variation and visualize correlation between different features                            <br/>
+1. __PCA__:                             <br/>
 2. __DBSCAN__: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
 3. __Linear Regression__:  find any other existing __correlations__ and predict the views based upon any other correlated features            <br/>
 4. __Multiple Regression__: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation)<br/>
@@ -46,39 +46,44 @@ The csv format of final file that contains both Old and New data:
 |10. videoViews	       |21. channelSubsCount    |32. publishedDayOfWeek         |
 |11. videoLikes	       |22. channelVideoCount	  |33. newOrOldData               |
 	
- 
+ ## Data Analysis
+ **Correlation**\
+First, an analysis of the correlation between different variables was performed. Looking at the first row, it is seen that only likes, dislikes and comment count are correlated with the number of views of a video.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Correlation%20table.PNG">
+	<br>
+	  Figure X: Correlation Table
+</p>
+
+**Statistical Summary**\
+Then, a statistical summary of each of our variables was obtained. This analysis is useful to potentially identify any outliers in the data.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/max-min-std.PNG">
+	<br>
+	  Figure X: Statistical Summary
+</p>
+
+**Category ID Analysis**\
+The category ID represents the content of the video
+<p align="center">
+  <img src="https://github.com/shyam100v/cs4641Project/blob/master/image/CategoryID.PNG">
+	<br>
+	  Figure X: Views versus Category ID
+</p>
 
 ## Principal Component Analysis(PCA)
 We selected some properties from original video dataset as features of videos, including trending rank, video category, number of views, likes, and dislikes, number of comments, publish time, and video channel related features. For features like duration of video and publish time, we preprocessed our data such that they are represented in the same unit(second) and in a 24-hour time scale.
 
 We combined all 12 features into a training dataset and apply PCA. PCA was used to reduce the dimension of features through capturing variation. Here is the cumulative explained variance plot. 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_variance.PNG">
-	<br>
-	  Figure X: PCA variance
-</p>
+![pca_variance](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_variance.PNG)
 
 From the plot, we can see that at 6 components, we will get a desired cumulative explained variance(0.9). We also made two component PCA scatter plots to give us some visualizations.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_views.PNG">
-	<br>
-	  Figure X: PCA number of views plot
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_likes.PNG">
-	<br>
-	  Figure X: PCA number of likes pllot
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_dislikes.PNG">
-	<br>
-	  Figure X: PCA number of dislikes plot
-</p>
+![pca_views](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_views.PNG)
+![pca_likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_likes.PNG)
+![pca_dislikes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_dislikes.PNG)
 
 From the scatter plots, we do can see number of views, likes, and dislikes are correlated. Low number of views, low number of likes, and low number of dislikes are all clustered at the middle-left part of the graph.
 
@@ -112,22 +117,6 @@ After using DBSCAN clustering on three different characteristics of a video titl
 The clusters for majority of the graphs are evenly distributed along the x axis, showing very little correlation to the number of views. But, there are a couple clusters higher up on the graph that show that titles with lengths around 40 characters, minimal capital letters, and minimal punctuation marks are the videos accumulating more views. As a conclusion, there is little relation seen between the factors, but there is some evidence pointing to certain title formats.
 
 ## Linear Regression
-**Correlation**\
-First, an analysis of the correlation between different variables was performed. Looking at the first row, it is seen that only likes, dislikes and comment count are correlated with the number of views of a video.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Correlation%20table.PNG">
-	<br>
-	  Figure X: Correlation Table
-</p>
-
-**Statistical Summary**\
-Then, a statistical summary of each of our variables was obtained. This analysis is useful to potentially identify any outliers in the data.
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/max-min-std.PNG">
-	<br>
-	  Figure X: Statistical Summary
-</p>
 
 **Histograms**\
 Based on the table above, the data for the number of views, likes and dislikes was modified to remove any data points that were outside 2 standard deviations from their respective mean. Then, a basic histogram of the number of views, likes and dislikes was plotted. As it is appreciated on the graphs below, the three graphs are heavily skewed which is understandable — most common YouTubers probably won’t have that many views, likes and dislikes. Ideally, the data should resemble a Gaussian distribution. Luckily, a log tranformation can be applied to the number of views, likes and dislikes to achieve that.
