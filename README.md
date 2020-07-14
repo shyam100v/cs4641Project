@@ -156,13 +156,25 @@ A basic histogram of the number of views, likes and dislikes was plotted. As it 
 **Linear Regression**\
 Using this 3 histograms above, a linear regression of the log number of views versus the log number of likes and dislikes can be plotted (see [code](https://github.com/shyam100v/cs4641Project/blob/master/Linear%20Regression.py)). As expected, both correlations show an R^2 greater than 0.6, showing a big correlation between both the number of likes and dislikes and the number of views of a video. 
 
-![Linear regression of log views versus log dislikes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20dislikes.PNG)
-![Linear regression of log views versus log likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20dislikes.PNG">
+	<br>
+	  Figure 9: Linear regression of log views versus log dislikes
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG">
+	<br>
+	  Figure 10: Linear regression of log views versus log likes
+</p>
 
 
 This analysis was only performed on these 2 variables since no other variables appear to correlate with the number of views of a video. For example, when performing the linear regression of views versus the title length, an R^2 close to 0 is obtained.
 
-![Views versus Title Length](https://github.com/shyam100v/cs4641Project/blob/master/image/Views%20versus%20Title%20Length.PNG)
+<p align="center">
+  <img src="https://github.com/shyam100v/cs4641Project/blob/master/image/Views%20versus%20Title%20Length.PNG">
+	<br>
+	  Figure 11: Linear regression of views versus title length
+</p>
 
 ## Multiple Regression
 **Data Modifications**\
@@ -171,13 +183,13 @@ Data regarding number of views was originally very skewed, so we removed any out
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewskew.png">
 	<br>
-	  Figure 9: Multiple Regression Skewed Data
+	  Figure 12: Multiple Regression Skewed Data
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_viewlog.png">
 	<br>
-	  Figure 10: Multiple Regression Modified Data
+	  Figure 13: Multiple Regression Modified Data
 </p>
 
 **Multiple Regression Analysis**\
@@ -186,19 +198,19 @@ We used three parameters versus the number of views on a video (title length, nu
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_lengthcapsreg.png">
 	<br>
-	  Figure 11: Multiple Regression Length vs Number of Capital Letters
+	  Figure 14: Multiple Regression Length vs Number of Capital Letters
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_lengthpuncsreg.png">
 	<br>
-	  Figure 12: Multiple Regression Length vs Number of Punctuation Marks
+	  Figure 15: Multiple Regression Length vs Number of Punctuation Marks
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_capspuncsreg.png">
 	<br>
-	  Figure 13: Multiple Number of Capital Letters vs Number of Punctuation Marks
+	  Figure 16: Multiple Number of Capital Letters vs Number of Punctuation Marks
 </p>
 
 As can be seen above, the grey plane in each of the graphs is the regression model that fits the set of data points the best. Since our data points are fairly spread out and do not show much correlation to the number of views, the fitted planes are relatively flat, and center around the area where most of the data points are in order to at least fit for a majority of videos. 
@@ -211,7 +223,7 @@ As a representation of the accuracy of our model, the below graph shows a compar
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_predvsact.png">
 	<br>
-	  Figure 14: Predicted Views vs Actual Views
+	  Figure 17: Predicted Views vs Actual Views
 </p>
 
 In the below graph, where it shows the error in prediction based on the number of actual views, it can be seen that the lower the actual number of views a video has, the more accurate this model will be in its predictions. 
@@ -219,7 +231,7 @@ In the below graph, where it shows the error in prediction based on the number o
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/MultReg_accuracy.png">
 	<br>
-	  Figure 15: Multiple Regression Model Accuracy
+	  Figure 18: Multiple Regression Model Accuracy
 </p>
 
 In conclusion, we see that the characteristics of a video title actually have a much smaller effect on the popularity of a video than we originally believed and has an incredibly low correlation with the number of views, especially on videos with extremely high view count.
@@ -236,7 +248,7 @@ __Data Preparation__: The data collected using the __YouTube API__ is used to tr
 <p align="center">
   <img height = "450" width = "500"  src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png">
 	<br>
-	  Figure 16: Sample of data for analysis
+	  Figure 19: Sample of data for analysis
 </p>
 
 __Model performance and Feature importance__
@@ -246,7 +258,7 @@ With all the above listed features, the model has an RMSE of __772445__ views. W
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi1.png">
 	<br>
-	  Figure 17: Feature importance-1
+	  Figure 20: Feature importance-1
 </p>
 
 While this is intuitive, this does not serve as a good model for prediction since likes, dislikes, age of video and comments are not known in advance. After removing these features, the feature importance is plotted below:
@@ -254,7 +266,7 @@ While this is intuitive, this does not serve as a good model for prediction sinc
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/mdi3.png">
 	<br>
-	  Figure 18: Feature importance-2
+	  Figure 21: Feature importance-2
 </p>
 
 
