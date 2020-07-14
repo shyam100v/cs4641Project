@@ -261,7 +261,7 @@ From the analyses we carried out, following are the key insights and results:
 1. __Categories with high number of views__: Film & Animation, Music, Entertainment and News and Politics.
 2. __Catergories with least number of views__: Nonprofits & Activism and Shorts
 3. __1:30 to 8:30 pm GMT__ is a popular time frame to publish videos so they trend. There is __no optimal title length. Less to none captial letters and punctuation__ in video title is optimal.
-4. We can see there is a relationship between low number of dislikes, low number of likes, and low number of views.
+4. There is a relationship between number of dislikes, number of likes, and number of views.
 5. The video title plays a __minor role__ in the popularity of the most popular videos. But, for the less exposed or advertised videos, keeping to minimal capital letters and punctuation can help boost views slightly. 
 6. The __channel's popularity__ plays a major role in determining the popularity of a video. Particularly, the __channel subscriber and view count, age of channel and channel video count__ are dominant factors.
 
