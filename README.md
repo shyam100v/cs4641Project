@@ -65,7 +65,9 @@ Then, a statistical summary of each of our variables was obtained. This analysis
 </p>
 
 **Category ID Analysis**\
-The category ID represents the content of the video (Click [here](https://gist.github.com/dgp/1b24bf2961521bd75d6c) to see the different cateories). As shown in Figure X, the categories with the higher number of views are:
+The category ID represents the content of the video (Click [here](https://gist.github.com/dgp/1b24bf2961521bd75d6c) to see the different cateories). 
+__Categories with high number of views__: Film & Animation, Music, Entertainment and News and Politics. On the other side
+__Catergories with least number of views__: Nonprofits & Activism and Shorts
 <p align="center">
   <img src="https://github.com/shyam100v/cs4641Project/blob/master/image/CategoryID.PNG">
 	<br>
