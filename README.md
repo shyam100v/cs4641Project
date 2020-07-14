@@ -70,7 +70,7 @@ The category ID represents the content of the video (Click [here](https://gist.g
 * __Categories with least number of views__: "Nonprofits & Activism" and "Shorts"
 
 <p align="center">
-  <img src="https://github.com/shyam100v/cs4641Project/blob/master/image/CategoryID.PNG">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/CategoryID.PNG">
 	<br>
 	  Figure 3: Views versus Category ID
 </p>
@@ -171,7 +171,7 @@ Using this 3 histograms above, a linear regression of the log number of views ve
 This analysis was only performed on these 2 variables since no other variables appear to correlate with the number of views of a video. For example, when performing the linear regression of views versus the title length, an R^2 close to 0 is obtained.
 
 <p align="center">
-  <img src="https://github.com/shyam100v/cs4641Project/blob/master/image/Views%20versus%20Title%20Length.PNG">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Views%20versus%20Title%20Length.PNG">
 	<br>
 	  Figure 11: Linear regression of views versus title length
 </p>
