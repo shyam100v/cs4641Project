@@ -159,7 +159,9 @@ Using this 3 histograms above, a linear regression of the log number of views ve
 ![Linear regression of log views versus log dislikes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20dislikes.PNG)
 ![Linear regression of log views versus log likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
 
+
 When performing the same analysis with other features, an R^2 close to 0 is obtained.
+
 ![Views versus Title Length](https://github.com/shyam100v/cs4641Project/blob/master/image/Views%20versus%20Title%20Length.PNG)
 
 ## Multiple Regression
@@ -264,7 +266,7 @@ From the analyses we carried out, following are the key insights and results:
 
 1. __Categories with high number of views__: Film & Animation, Music, Entertainment and News and Politics.
 2. __Categories with least number of views__: Nonprofits & Activism and Shorts
-3. __1:30 to 8:30 pm GMT__ is a popular time frame to publish videos so they trend. There is __no optimal title length. Less to none captial letters and punctuation__ in video title is optimal.
+3. __1:00 pm to 7:00 pm GMT__ is a popular time frame to publish videos so they trend, especially between 5:00 pm-7:00 pm. There is __no optimal title length. Less to none captial letters and punctuation__ in video title is optimal.
 4. There is a relationship between number of dislikes, number of likes, and number of views.
 5. The video title plays a __minor role__ in the popularity of the most popular videos. But, for the less exposed or advertised videos, keeping to minimal capital letters and punctuation can help boost views slightly. 
 6. The __channel's popularity__ plays a major role in determining the popularity of a video. Particularly, the __channel subscriber and view count, age of channel and channel video count__ are dominant factors.
