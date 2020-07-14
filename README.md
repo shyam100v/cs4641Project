@@ -66,7 +66,7 @@ Then, a statistical summary of each of our variables was obtained. This analysis
 
 **Category ID Analysis**\
 The category ID represents the content of the video (Click [here](https://gist.github.com/dgp/1b24bf2961521bd75d6c) to see the different cateories). 
-__Categories with high number of views__: Film & Animation, Music, Entertainment and News and Politics. On the other side
+__Categories with high number of views__: Film & Animation, Music, Entertainment and News and Politics
 __Catergories with least number of views__: Nonprofits & Activism and Shorts
 <p align="center">
   <img src="https://github.com/shyam100v/cs4641Project/blob/master/image/CategoryID.PNG">
@@ -131,7 +131,7 @@ Based on the table above, the data for the number of views, likes and dislikes w
 ![Log number of views](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Log%20number%20of%20views.PNG)
 
 **Linear Regression**\
-Using this 3 histograms above, a linear regression of the log number of views versus the log number of likes and dislikes can be plotted (see [code](https://github.com/shyam100v/cs4641Project/blob/master/Linear%20Regression.py). As expected, both correlations show an R^2 greater than 0.6, showing a big correlation between both the number of likes and dislikes and the number of views of a video. This analysis was only performed on these 2 variables since no other variables appear to correlate with the number of views of a video
+Using this 3 histograms above, a linear regression of the log number of views versus the log number of likes and dislikes can be plotted (see [code](https://github.com/shyam100v/cs4641Project/blob/master/Linear%20Regression.py)). As expected, both correlations show an R^2 greater than 0.6, showing a big correlation between both the number of likes and dislikes and the number of views of a video. This analysis was only performed on these 2 variables since no other variables appear to correlate with the number of views of a video
 
 ![Linear regression of log views versus log dislikes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20dislikes.PNG)
 ![Linear regression of log views versus log likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Linear%20regression%20of%20log%20views%20versus%20log%20likes.PNG)
@@ -228,11 +228,12 @@ It is seen that the channel subscriber count, the number of videos, total views 
 
 From the analyses we carried out, following are the key insights and results:
 
-1. bla
-2. __1:30 to 8:30 pm GMT__ is a popular time frame to publish videos so they trend. There is __no optimal title length. Less to none captial letters and punctuation__ in video title is optimal.
-3. bla
-4. The video title plays a __minor role__ in the popularity of the most popular videos. But, for the less exposed or advertised videos, keeping to minimal capital letters and punctuation can help boost views slightly. 
-5. The __channel's popularity__ plays a major role in determining the popularity of a video. Particularly, the __channel subscriber and view count, age of channel and channel video count__ are dominant factors.
+1. __Categories with high number of views__: Film & Animation, Music, Entertainment and News and Politics.
+2. __Catergories with least number of views__: Nonprofits & Activism and Shorts
+3. __1:30 to 8:30 pm GMT__ is a popular time frame to publish videos so they trend. There is __no optimal title length. Less to none captial letters and punctuation__ in video title is optimal.
+4. bla
+5. The video title plays a __minor role__ in the popularity of the most popular videos. But, for the less exposed or advertised videos, keeping to minimal capital letters and punctuation can help boost views slightly. 
+6. The __channel's popularity__ plays a major role in determining the popularity of a video. Particularly, the __channel subscriber and view count, age of channel and channel video count__ are dominant factors.
 
 
 ## Future Work 
