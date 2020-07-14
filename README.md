@@ -295,7 +295,7 @@ The following are a few possible directions in which our work can be extended:
 Carla: Data Analysis, Cleaning data and Linear Regression <br/>
 Yuqi: Principal Component Analysis <br/>
 Preethi: DBSCAN and Multiple Regressor <br/>
-Divya: Cleaning data and DBSCAN <br/>
+Divya: Finding dataset, Cleaning data and DBSCAN <br/>
 Shyam: Cleaning/Augmenting data using API and Gradient Boosting Regressor <br/>
 
 ## References:
