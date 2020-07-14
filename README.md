@@ -9,7 +9,7 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 
 We want to help people __monetize their content more effectively__ on YouTube by increasing their popularity on the platform! To that end, we carry out the following analyses:
 
-1. __PCA__: to reduce dimension of features through capturing variation and visualize correlation between different features       <br/>
+1. __PCA__:                             <br/>
 2. __DBSCAN__: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
 3. __Linear Regression__:  find any other existing __correlations__ and predict the views based upon any other correlated features            <br/>
 4. __Multiple Regression__: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation)<br/>
@@ -65,7 +65,7 @@ Then, a statistical summary of each of our variables was obtained. This analysis
 </p>
 
 **Category ID Analysis**\
-The category ID represents the content of the video
+The category ID represents the content of the video (Click [here](https://gist.github.com/dgp/1b24bf2961521bd75d6c) to see the different cateories). As shown in Figure X, the categories with the higher number of views are:
 <p align="center">
   <img src="https://github.com/shyam100v/cs4641Project/blob/master/image/CategoryID.PNG">
 	<br>
@@ -77,32 +77,13 @@ We selected some properties from original video dataset as features of videos, i
 
 We combined all 12 features into a training dataset and apply PCA. PCA was used to reduce the dimension of features through capturing variation. Here is the cumulative explained variance plot. 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_variance.PNG">
-	<br>
-	  Figure X: PCA variance plot
-</p>
-
+![pca_variance](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_variance.PNG)
 
 From the plot, we can see that at 6 components, we will get a desired cumulative explained variance(0.9). We also made two component PCA scatter plots to give us some visualizations.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_views.PNG">
-	<br>
-	  Figure X: PCA number of views plot
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_likes.PNG">
-	<br>
-	  Figure X: PCA number of likes plot
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_dislikes.PNG">
-	<br>
-	  Figure X: PCA number of dislikes plot
-</p>
+![pca_views](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_views.PNG)
+![pca_likes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_likes.PNG)
+![pca_dislikes](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/pca_dislikes.PNG)
 
 From the scatter plots, we do can see number of views, likes, and dislikes are correlated. Low number of views, low number of likes, and low number of dislikes are all clustered at the middle-left part of the graph.
 
