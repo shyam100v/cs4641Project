@@ -57,7 +57,7 @@ First, an analysis of the correlation between different variables was performed.
 </p>
 
 **Statistical Summary**\
-Then, a statistical summary of each of our variables was obtained. This analysis is useful to potentially identify any outliers in the data.
+This analysis is useful to potentially identify any outliers in the data.
 <p align="center">
   <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/max-min-std.PNG">
 	<br>
@@ -67,7 +67,7 @@ Then, a statistical summary of each of our variables was obtained. This analysis
 **Category ID Analysis**\
 The category ID represents the content of the video (Click [here](https://gist.github.com/dgp/1b24bf2961521bd75d6c) to see the different cateories). 
 * __Categories with high number of views__: Film & Animation, Music, News and Politics, and Entertainment
-* __Catergories with least number of views__: Nonprofits & Activism and Shorts
+* __Categories with least number of views__: Nonprofits & Activism and Shorts
 
 <p align="center">
   <img src="https://github.com/shyam100v/cs4641Project/blob/master/image/CategoryID.PNG">
@@ -260,7 +260,7 @@ It is seen that the channel subscriber count, the number of videos, total views 
 From the analyses we carried out, following are the key insights and results:
 
 1. __Categories with high number of views__: Film & Animation, Music, Entertainment and News and Politics.
-2. __Catergories with least number of views__: Nonprofits & Activism and Shorts
+2. __Categories with least number of views__: Nonprofits & Activism and Shorts
 3. __1:30 to 8:30 pm GMT__ is a popular time frame to publish videos so they trend. There is __no optimal title length. Less to none captial letters and punctuation__ in video title is optimal.
 4. There is a relationship between number of dislikes, number of likes, and number of views.
 5. The video title plays a __minor role__ in the popularity of the most popular videos. But, for the less exposed or advertised videos, keeping to minimal capital letters and punctuation can help boost views slightly. 
@@ -281,6 +281,8 @@ The following are a few possible directions in which our work can be extended:
 [2] F Figueiredoet al "The tube over time: characterizing popularity growth of youtube videos." Proceedings of the fourth ACM international conference on Web search and data mining. 2011.<br/>
 [3] G. Chatzopoulou et al, "A First Step Towards Understanding Popularity in YouTube," INFOCOM IEEE Conference on Computer Communications Workshops, CA, 2010 <br/>
 [4] Coding, Sigma. “How to Build a Linear Regression Model in Python | Part 1.” Youtube, Apr. 2019, www.youtube.com/watch?v=MRm5sBfdBBQ.
-
+[5] "DBSCAN Clustering Easily Explained with Implementation." Youtube,  https://www.youtube.com/watch?v=C3r7tGRe2eI&t=942s
+[6] "Multiple Regression Analysis in Python | Part 1." Youtube Apr 27, 2019 https://www.youtube.com/watch?v=M32ghIt1c88
+[7] "Youtube Views Predictor." Aravind Srinivasan, December 12, 2017 https://towardsdatascience.com/youtube-views-predictor-9ec573090acb
 
 
