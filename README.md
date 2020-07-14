@@ -65,7 +65,7 @@ This analysis is useful to potentially identify any outliers in the data.
 </p>
 
 **Category ID Analysis**\
-The category ID represents the content of the video (Click [here](https://gist.github.com/dgp/1b24bf2961521bd75d6c) to see the different cateories). 
+The category ID represents the content of the video (Click [here](https://gist.github.com/dgp/1b24bf2961521bd75d6c) to see the different categories). 
 * __Categories with high number of views__: "Film & Animation", "Music", "News and Politics", and "Entertainment"
 * __Categories with least number of views__: "Nonprofits & Activism" and "Shorts"
 
