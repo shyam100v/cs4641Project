@@ -280,9 +280,9 @@ The following are a few possible directions in which our work can be extended:
 [1] Gill, Phillipa et al. "Youtube traffic characterization: a view from the edge." Proceedings of the 7th ACM SIGCOMM conference on Internet measurement. 2007. <br/>
 [2] F Figueiredoet al "The tube over time: characterizing popularity growth of youtube videos." Proceedings of the fourth ACM international conference on Web search and data mining. 2011.<br/>
 [3] G. Chatzopoulou et al, "A First Step Towards Understanding Popularity in YouTube," INFOCOM IEEE Conference on Computer Communications Workshops, CA, 2010 <br/>
-[4] Coding, Sigma. “How to Build a Linear Regression Model in Python | Part 1.” Youtube, Apr. 2019, www.youtube.com/watch?v=MRm5sBfdBBQ.
-[5] "DBSCAN Clustering Easily Explained with Implementation." Youtube,  https://www.youtube.com/watch?v=C3r7tGRe2eI&t=942s
-[6] "Multiple Regression Analysis in Python | Part 1." Youtube Apr 27, 2019 https://www.youtube.com/watch?v=M32ghIt1c88
-[7] "Youtube Views Predictor." Aravind Srinivasan, December 12, 2017 https://towardsdatascience.com/youtube-views-predictor-9ec573090acb
+[4] Coding, Sigma. “How to Build a Linear Regression Model in Python | Part 1.” Youtube, Apr. 2019, www.youtube.com/watch?v=MRm5sBfdBBQ.<br/>
+[5] "DBSCAN Clustering Easily Explained with Implementation." Youtube,  https://www.youtube.com/watch?v=C3r7tGRe2eI&t=942s <br/>
+[6] "Multiple Regression Analysis in Python | Part 1." Youtube Apr 27, 2019 https://www.youtube.com/watch?v=M32ghIt1c88 <br/>
+[7] "Youtube Views Predictor." Aravind Srinivasan, December 12, 2017 https://towardsdatascience.com/youtube-views-predictor-9ec573090acb <br/>
 
 
