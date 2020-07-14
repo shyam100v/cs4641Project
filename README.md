@@ -9,11 +9,11 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 
 We want to help people __monetize their content more effectively__ on YouTube by increasing their popularity on the platform! To that end, we carry out the following analyses:
 
-1. PCA:                             <br/>
-2. DBSCAN: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
-3. Linear Regression:  find any other existing correlations and "predict" the views based upon any other correlated features            <br/>
-4. Multiple Regression: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation)<br/>
-5. Gradient Boosting Regressor: To build an ensemble regressor to predict the number of views and __rank feature importances__    <br/>
+1. __PCA__:                             <br/>
+2. __DBSCAN__: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
+3. __Linear Regression__:  find any other existing correlations and predict the views based upon any other correlated features            <br/>
+4. __Multiple Regression__: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation)<br/>
+5. __Gradient Boosting Regressor__: To build an ensemble regressor to predict the number of views and __rank feature importances__    <br/>
 
 ## Dataset: 
 -> https://www.kaggle.com/datasnaek/youtube-new <br/>
