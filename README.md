@@ -12,7 +12,7 @@ We want to help people __monetize their content more effectively__ on YouTube by
 1. __PCA__: to __reduce dimension of features__ through capturing variation and visualize correlation between different features            <br/>
 2. __DBSCAN__: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
 3. __Linear Regression__:  find any other existing __correlations__ and predict the views based upon any other correlated features            <br/>
-4. __Multiple Regression__: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation)<br/>
+4. __Multiple Regression__: to predict the popularity of a video solely based on the __title's characteristics__ (length, capital letters, and puctuation)<br/>
 5. __Gradient Boosting Regressor__: To build an ensemble regressor to predict the number of views and __rank feature importances__    <br/>
 
 ## Dataset: 
