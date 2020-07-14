@@ -7,13 +7,13 @@ YouTube is an online video-sharing platform with billions of users, posting and 
 
 ## Motivation and methods
 
-We want to help people __make money__ on YouTube by increasing their popularity on the platform!
+We want to help people __monetize their content more effectively__ on YouTube by increasing their popularity on the platform! To that end, we carry out the following analyses:
 
 -> PCA:                             <br/>
 -> DBSCAN: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
 -> Linear Regression:               <br/>
 -> Multiple Regression: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation)<br/>
--> Gradient Boosting Regressor:     <br/>
+-> Gradient Boosting Regressor: To build an ensemble regressor to predict the number of views and __rank feature importances__    <br/>
 
 ## Dataset: 
 -> https://www.kaggle.com/datasnaek/youtube-new <br/>
@@ -189,7 +189,7 @@ __Model used__: The [sklearn.ensemble.GradientBoostingRegressor model](https://s
 __Data Preparation__: The data collected using the __YouTube API__ is used to train and test the model with the logarithm of number of views of a video as the target label. Only the videos that have a view count between 1000 and 10 million are used. Sample of the data used is shown:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png">
+  <img height = "500" width = "500"  src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/dataSample1.png">
 	<br>
 	  Sample of data for analysis
 </p>
