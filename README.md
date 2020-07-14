@@ -293,7 +293,7 @@ The following are a few possible directions in which our work can be extended:
 
 ## Individual Contributions
 Carla: Data Analysis, Cleaning data and Linear Regression <br/>
-Yuqi: Principal Comppnent Analysis <br/>
+Yuqi: Principal Component Analysis <br/>
 Preethi: DBSCAN and Multiple Regressor <br/>
 Divya: Cleaning data and DBSCAN <br/>
 Shyam: Cleaning/Augmenting data and Gradient Boosting Regressor <br/>
