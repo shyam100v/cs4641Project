@@ -296,7 +296,7 @@ Carla: Data Analysis, Cleaning data and Linear Regression <br/>
 Yuqi: Principal Component Analysis <br/>
 Preethi: DBSCAN and Multiple Regressor <br/>
 Divya: Cleaning data and DBSCAN <br/>
-Shyam: Cleaning/Augmenting data and Gradient Boosting Regressor <br/>
+Shyam: Cleaning/Augmenting data using API and Gradient Boosting Regressor <br/>
 
 ## References:
 [1] Gill, Phillipa et al. "Youtube traffic characterization: a view from the edge." Proceedings of the 7th ACM SIGCOMM conference on Internet measurement. 2007. <br/>
