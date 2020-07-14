@@ -12,7 +12,7 @@ We want to help people __make money__ on YouTube by increasing their popularity 
 -> PCA:                             <br/>
 -> DBSCAN: to find the __popular time published__ and __optimal length, number of capital letters, and punctuation in video title__     <br/>
 -> Linear Regression:               <br/>
--> Multiple Regression: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation<br/>
+-> Multiple Regression: to predict the popularity of a video solely based on the __title's characteristics__(length, capital letters, and puctuation)<br/>
 -> Gradient Boosting Regressor:     <br/>
 
 ## Dataset: 
@@ -73,15 +73,25 @@ Using DBSCAN clustering on the video views and publishing time features, we can 
 **Video Titles**\
 After using DBSCAN clustering on three different characteristics of a video title (length, number of capital letters,and  number of exclamation/question marks) we can see that the results in the graphs below are different than we originally expected.
 
-![title length dbscan](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Title_Length_DBSCAN.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Title_Length_DBSCAN.png">
+	<br>
+	  Figure X: DBSCAN Title Length
+</p>
 
-![capital letters dbscan](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Num_Caps_DBSCAN.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Num_Caps_DBSCAN.png">
+	<br>
+	  Figure X: DBSCAN Capital Letters
+</p>
 
-![punctuation dbscan](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Num_Puncs_DBSCAN.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Num_Puncs_DBSCAN.png">
+	<br>
+	  Figure X: DBSCAN Punctuation Marks
+</p>
 
-Ignoring any outlier points, we can see here that there actually little to no correlation between the view count of a video and its title's characteristics. The largest clusters in the first two graphs show that there is practically no relation between the length of the title or the number of capital letters in the title and the view count. But, when looking at the clusters at a higher view count, we can actually see a little of the opposite of our expected outcome. Instead of long video titles, we can see higher view count clusters aroung the midpoint in video titles and instead of having a lot of capital letters, we actually see clusters with less capital letters have a higher view count. Finally, with the punctuation marks, we can see that clusters with high view counts actually have on average little to no punctuation marks. 
-
-To conlcude our findings, we can see that the majority of videos do not rely on the characteristics of the video titles. For those that do have some correlation, the title length ranges around 40, and the number of capital letters and punctuation stays around zero.
+The clusters for majority of the graphs are evenly distributed along the x axis, showing very little correlation to the number of views. But, there are a couple clusters higher up on the graph that show that titles with lengths around 40 characters, minimal capital letters, and minimal punctuation marks are the videos accumulating more views. As a conclusion, there is little relation seen between the factors, but there is some evidence pointing to certain title formats.
 
 ## Linear Regression
 **Correlation**\
