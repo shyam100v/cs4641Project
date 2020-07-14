@@ -80,11 +80,20 @@ To conlcude our findings, we can see that the majority of videos do not rely on 
 ## Linear Regression
 **Correlation**\
 First, an analysis of the correlation between different variables was performed. Looking at the first row, it is seen that only likes, dislikes and comment count are correlated with the number of views of a video.
-![Correlation table](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Correlation%20table.PNG)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/Correlation%20table.PNG">
+	<br>
+	  Figure X: Correlation Table
+</p>
 
 **Statistical Summary**\
 Then, a statistical summary of each of our variables was obtained. This analysis is useful to potentially identify any outliers in the data.
-![max-min-std](https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/max-min-std.PNG)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyam100v/cs4641Project/master/image/max-min-std.PNG">
+	<br>
+	  Figure X: Statistical Summary
+</p>
 
 **Histograms**\
 Based on the table above, the data for the number of views, likes and dislikes was modified to remove any data points that were outside 2 standard deviations from their respective mean. Then, a basic histogram of the number of views, likes and dislikes was plotted. As it is appreciated on the graphs below, the three graphs are heavily skewed which is understandable — most common YouTubers probably won’t have that many views, likes and dislikes. Ideally, the data should resemble a Gaussian distribution. Luckily, a log tranformation can be applied to the number of views, likes and dislikes to achieve that.
